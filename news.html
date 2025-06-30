@@ -3,65 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="News and updates from BUDS & CAPS CO — your plant-powered community." />
   <title>BUDS & CAPS CO | News & Blog</title>
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <style>
+    :root {
+      --primary: #00ffae;
+      --secondary: #1fc744;
+      --bg-dark: #1f2d1f;
+      --text-light: #e4ffe4;
+      --accent: #aaffdd;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to bottom, #1fc744, #1f2d1f);
-      color: #e4ffe4;
-      text-align: center;
+      background: linear-gradient(to bottom, var(--secondary), var(--bg-dark));
+      color: var(--text-light);
     }
 
-   header {
+    header {
       padding: 80px 20px 40px;
-      background-image: url('header-bg.jpg'); /* Change this if needed */
-      background-size: cover;
-      background-position: center;
+      background: url('header-bg.jpg') center/cover no-repeat;
+      background-color: rgba(0, 0, 0, 0.5);
       background-blend-mode: overlay;
-      background-color: rgba(0, 0, 0, 0.4); /* dark overlay for text readability */
-      color: #ffffff;
-      text-shadow: 2px 2px 6px #000;
+      text-align: center;
     }
 
     h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 42px;
+      font-size: 48px;
       margin: 0;
-      text-shadow: 2px 2px 6px #00ffaa;
+      text-shadow: 2px 2px 6px var(--primary);
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary); }
+      to { text-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent); }
     }
 
     .intro {
-      font-size: 16px;
+      font-size: 18px;
       max-width: 800px;
       margin: 20px auto 40px;
       padding: 0 20px;
+      line-height: 1.6;
     }
 
     .post {
       max-width: 800px;
       margin: 30px auto;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid #39e39a;
-      border-radius: 12px;
-      text-align: left;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(57, 227, 154, 0.4);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
     }
 
     .post h2 {
-      font-size: 22px;
-      color: #aaffdd;
+      font-size: 24px;
+      color: var(--accent);
       margin-top: 0;
     }
 
     .post p {
-      line-height: 1.6;
+      line-height: 1.7;
       font-size: 16px;
     }
 
     .post a {
-      color: #aaffdd;
+      color: var(--accent);
       text-decoration: underline;
     }
 
@@ -71,93 +99,113 @@
 
     .date {
       font-size: 14px;
-      color: #cccccc;
-      margin-bottom: 8px;
+      color: #bbbbbb;
+      margin-bottom: 10px;
     }
 
     .back-link {
       display: inline-block;
-      margin: 40px auto 20px;
-      color: #9effc9;
+      margin: 50px auto 30px;
+      color: var(--accent);
       text-decoration: underline;
       font-size: 18px;
+      transition: color 0.3s;
     }
 
     .back-link:hover {
       color: #d0ffd0;
     }
+
+    footer {
+      background-color: rgba(0,0,0,0.8);
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .post h2 {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>News & Blog</h1>
     <p class="intro">
-      Updates, tips, drops, and plant-powered insight from the BUDS & CAPS community.
-      Expect news from the underground, education on safe use, and handpicked links worth sharing.
+      Updates, drops, tips, and plant-powered insights from the <strong>BUDS & CAPS</strong> community.
+      Expect underground news, wellness education, and curated finds.
     </p>
   </header>
 
-   <!-- ✅ Weed Post 1 -->
+  <!-- ✅ Post 1 -->
   <section class="post">
     <div class="date">🗓️ July 02, 2025</div>
-    <h2>🧀 C H E E S E – Live Soon</h2>
+    <h2>🧀 C H E E S E – Drop Incoming</h2>
     <p>
-      Our July Cheese drop soon available!! Make contact for info via direct request.
-       
+      Our July <strong>Cheese</strong> drop goes live soon! Message us directly for info — limited and curated as always.
       <br><br>
       🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-      
     </p>
   </section>
 
-   <!-- ✅ Shroom Post 1 -->
+  <!-- ✅ Post 2 -->
   <section class="post">
     <div class="date">🗓️ July 02, 2025</div>
-    <h2>🍄  P S I L O C Y B I N _ E D I B L E S – Live Soon</h2>
+    <h2>🍄 P S I L O C Y B I N  _ E D I B L E S – Launching Soon</h2>
     <p>
-      Our July Edibles landing soon!! Make contact for info via direct request.
-       
+      Our July <strong>Psilocybin Edibles</strong> are landing shortly — curated for balance and clarity. DM for details.
       <br><br>
       🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-      
     </p>
   </section>
-  
-  <!-- ✅ Sample Post 1 -->
+
+  <!-- ✅ Post 3 -->
   <section class="post">
     <div class="date">🗓️ June 30, 2025</div>
     <h2>🌕 Full Moon Microdose Drop – Now Live</h2>
     <p>
-      Our July blend drop is available now via direct request — designed for emotional clarity and creativity.
+      Our new blend is officially live — designed for emotional clarity, creativity, and focus.
       <br><br>
-      🔗 <a href="https://t.me/yourgroup" target="_blank">Join our private Telegram space</a> for more info and to get notified first.
+      🔗 <a href="https://t.me/yourgroup" target="_blank">Join our private Telegram space</a> for access and updates.
     </p>
   </section>
 
-  <!-- ✅ Sample Post 2 -->
+  <!-- ✅ Post 4 -->
   <section class="post">
     <div class="date">🗓️ June 28, 2025</div>
     <h2>📽️ Psilocybin & ADHD – What the Research Says</h2>
     <p>
-      Microdosing may help improve focus and executive function in those with attention issues. We curated this 7-min video breaking it down.
+      Microdosing may improve focus and executive function for some. We've curated a 7-minute video breaking it down.
       <br><br>
       ▶️ <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch now on YouTube</a>
     </p>
   </section>
 
-  <!-- ✅ Sample Post 3 -->
+  <!-- ✅ Post 5 -->
   <section class="post">
     <div class="date">🗓️ June 21, 2025</div>
     <h2>🧪 Cultivation Tip: Humidity vs. Airflow</h2>
     <p>
-      Never sacrifice clean airflow for moisture — indirect fan circulation is best. We’ve added 5 new tips in the guide below.
+      Don't sacrifice clean airflow for humidity. Indirect fan circulation is best. Check our guide for 5 key tips.
       <br><br>
       📄 <a href="https://drive.google.com/yourguide" target="_blank">Download the Grow Guide (PDF)</a>
     </p>
   </section>
 
-  <!-- 🔁 Future posts: just copy one of the <section class="post"> blocks above -->
-
+  <!-- 🔗 Back to Home -->
   <a class="back-link" href="index.html">← Back to Home</a>
+
+  <footer>
+    © 2025 BUDS & CAPS CO | All Rights Reserved
+  </footer>
 </body>
 </html>
