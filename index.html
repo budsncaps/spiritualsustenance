@@ -15,14 +15,20 @@
     }
 
     header {
-      padding: 80px 20px 40px;
-      background-image: url('header-bg.jpg'); /* Change this if needed */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background-image: url('header-bg.jpg'); /* Replace with your image */
       background-size: cover;
       background-position: center;
       background-blend-mode: overlay;
-      background-color: rgba(0, 0, 0, 0.4); /* dark overlay for text readability */
+      background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
       color: #ffffff;
       text-shadow: 2px 2px 6px #000;
+      min-height: 50vh;
     }
 
     h1 {
@@ -88,9 +94,20 @@
       color: #9fda9f;
       transform: scale(1.2);
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+      .section-title {
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>SPIRITUAL SUSTENANCE</h1>
     <p>Rooted in natural wisdom — cultivating conscious connection & curated plant journeys</p>
@@ -114,13 +131,12 @@
   </section>
 
   <section class="news">
-  <div class="section-title">Latest Updates</div>
-  <p>
-    New microdose packs arriving this full moon 🌕<br/>
-    <a href="news.html" style="color: #aaffdd; text-decoration: underline;">Visit our News & Blog</a> for more info, drops, and plant-powered insights.
-  </p>
-</section>
-
+    <div class="section-title">Latest Updates</div>
+    <p>
+      New microdose packs arriving this full moon 🌕<br/>
+      <a href="news.html" style="color: #aaffdd; text-decoration: underline;">Visit our News & Blog</a> for more info, drops, and plant-powered insights.
+    </p>
+  </section>
 
   <section class="contact">
     <div class="section-title">Connect With Us</div>
@@ -131,5 +147,6 @@
       <a href="https://x.com/BCco338114">🐦 X / Twitter</a>
     </div>
   </section>
+
 </body>
 </html>
