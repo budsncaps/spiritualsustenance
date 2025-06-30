@@ -3,17 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPIRITUAL SUSTENANCE</title>
+  <meta name="description" content="Spiritual Sustenance | Plant-powered community sharing knowledge, wellness, and curated experiences." />
+  <meta name="keywords" content="spirituality, community, wellness, cannabis, fungi, microdosing, plant medicine" />
+  <meta name="author" content="Spiritual Sustenance" />
+  <title>Spiritual Sustenance</title>
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       background: linear-gradient(to bottom, #1fc744, #1f2d1f);
       color: #e4ffe4;
-      text-align: center;
     }
 
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      z-index: 999;
+    }
+
+    nav a {
+      color: #e4ffe4;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #aaffdd;
+    }
+
+    /* Header */
     header {
       display: flex;
       flex-direction: column;
@@ -21,12 +56,11 @@
       align-items: center;
       text-align: center;
       padding: 80px 20px;
-      background-image: url('header-bg.jpg'); /* Replace with your image */
+      background-image: url('header-bg.jpg'); /* Replace if desired */
       background-size: cover;
       background-position: center;
       background-blend-mode: overlay;
-      background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
-      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.4);
       text-shadow: 2px 2px 6px #000;
       min-height: 50vh;
     }
@@ -38,31 +72,27 @@
       animation: glow 2s ease-in-out infinite alternate;
     }
 
+    header p {
+      max-width: 600px;
+    }
+
     @keyframes glow {
-      from {
-        text-shadow: 2px 2px 6px #00ffae, 0 0 10px #00ffae;
-      }
-      to {
-        text-shadow: 2px 2px 8px #00ffff, 0 0 15px #00ffff;
-      }
+      from { text-shadow: 2px 2px 6px #00ffae, 0 0 10px #00ffae; }
+      to { text-shadow: 2px 2px 8px #00ffff, 0 0 15px #00ffff; }
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); text-shadow: 0 0 4px #7affd6; }
-      50% { transform: scale(1.15); text-shadow: 0 0 12px #7affd6; }
-      100% { transform: scale(1); text-shadow: 0 0 4px #7affd6; }
-    }
-
-    .about, .news, .contact {
-      padding: 40px 20px;
+    /* Sections */
+    section {
+      padding: 60px 20px;
       max-width: 800px;
       margin: auto;
+      text-align: center;
     }
 
     .section-title {
       font-size: 28px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
       display: inline-block;
       padding-bottom: 5px;
     }
@@ -72,22 +102,19 @@
       padding: 0;
       text-align: left;
       line-height: 1.8;
-      max-width: 700px;
       margin: 20px auto;
+      max-width: 700px;
     }
 
-    .about p {
-      margin-bottom: 20px;
-    }
-
+    /* Contact Icons */
     .contact-icons a {
       margin: 10px;
       text-decoration: none;
       color: #e4ffe4;
-      font-size: 20px;
+      font-size: 22px;
       display: inline-block;
       animation: pulse 2.5s infinite ease-in-out;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .contact-icons a:hover {
@@ -95,7 +122,54 @@
       transform: scale(1.2);
     }
 
-    /* Responsive adjustments */
+    @keyframes pulse {
+      0% { transform: scale(1); text-shadow: 0 0 4px #7affd6; }
+      50% { transform: scale(1.15); text-shadow: 0 0 12px #7affd6; }
+      100% { transform: scale(1); text-shadow: 0 0 4px #7affd6; }
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #00ffae;
+      color: #003322;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00ffaa;
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgba(0,0,0,0.8);
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Responsive */
     @media (max-width: 600px) {
       h1 {
         font-size: 36px;
@@ -103,17 +177,31 @@
       .section-title {
         font-size: 24px;
       }
+      nav {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
+
 <body>
 
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header -->
   <header>
     <h1>SPIRITUAL SUSTENANCE</h1>
     <p>Rooted in natural wisdom — cultivating conscious connection & curated plant journeys</p>
   </header>
 
-  <section class="about">
+  <!-- About Section -->
+  <section class="about" id="about">
     <div class="section-title">About Us</div>
     <p>
       <strong>SPIRITUAL SUSTENANCE</strong> is a collective rooted in plant wisdom, personal growth, and conscious community. We explore the benefits of <strong>cannabis</strong>, <strong>functional fungi</strong>, and other natural allies for wellness, creativity, and connection.
@@ -124,29 +212,42 @@
       <li>🔗 <strong>Facilitate connections</strong> for private exchanges, collaborative projects, and curated drops — always in a spirit of trust and discretion.</li>
       <li>📰 <strong>Share updates</strong>, insights, and experiences from across the plant-powered world.</li>
     </ul>
-    <p>
-      We believe access to natural medicine, personal exploration, and open conversation shouldn't be gatekept — so we keep it simple, respectful, and real.
-    </p>
+    <p>We believe access to natural medicine, personal exploration, and open conversation shouldn't be gatekept — so we keep it simple, respectful, and real.</p>
     <p>This space is private, peer-guided, and always evolving. ✨</p>
   </section>
 
-  <section class="news">
+  <!-- News Section -->
+  <section class="news" id="news">
     <div class="section-title">Latest Updates</div>
     <p>
-      New microdose packs arriving this full moon 🌕<br/>
+      🌕 New microdose packs arriving this full moon.<br/>
       <a href="news.html" style="color: #aaffdd; text-decoration: underline;">Visit our News & Blog</a> for more info, drops, and plant-powered insights.
     </p>
   </section>
 
-  <section class="contact">
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
     <div class="section-title">Connect With Us</div>
     <div class="contact-icons">
-      <a href="mailto:budsandcapsco@gmail.com">📩 Email</a>
-      <a href="https://wa.me/27650840431">📱 WhatsApp</a>
-      <a href="https://instagram.com/_spiritual_sustenance_">📸 Instagram</a>
-      <a href="https://x.com/BCco338114">🐦 X / Twitter</a>
+      <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
+      <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
+      <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
     </div>
+
+    <h3 style="margin-top:30px;">Or send us a message:</h3>
+    <form action="https://formsubmit.co/your-email@example.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Spiritual Sustenance | All Rights Reserved
+  </footer>
 
 </body>
 </html>
