@@ -26,6 +26,13 @@
       text-shadow: 2px 2px 6px #00ffaa;
     }
 
+    .intro {
+      font-size: 16px;
+      max-width: 800px;
+      margin: 20px auto 40px;
+      padding: 0 20px;
+    }
+
     .post {
       max-width: 800px;
       margin: 30px auto;
@@ -37,17 +44,34 @@
     }
 
     .post h2 {
-      font-size: 24px;
+      font-size: 22px;
       color: #aaffdd;
+      margin-top: 0;
     }
 
     .post p {
       line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .post a {
+      color: #aaffdd;
+      text-decoration: underline;
+    }
+
+    .post a:hover {
+      color: #d6ffe9;
+    }
+
+    .date {
+      font-size: 14px;
+      color: #cccccc;
+      margin-bottom: 8px;
     }
 
     .back-link {
       display: inline-block;
-      margin: 30px auto;
+      margin: 40px auto 20px;
       color: #9effc9;
       text-decoration: underline;
       font-size: 18px;
@@ -61,22 +85,46 @@
 <body>
   <header>
     <h1>News & Blog</h1>
-    <p>Insights, drops, and mindful exploration from the BUDS & CAPS community</p>
+    <p class="intro">
+      Updates, tips, drops, and plant-powered insight from the BUDS & CAPS community.
+      Expect news from the underground, education on safe use, and handpicked links worth sharing.
+    </p>
   </header>
 
+  <!-- ✅ Sample Post 1 -->
   <section class="post">
-    <h2>🌕 Full Moon Microdose Drop – July 2025</h2>
+    <div class="date">🗓️ June 30, 2025</div>
+    <h2>🌕 Full Moon Microdose Drop – Now Live</h2>
     <p>
-      We’ve dropped a new batch of personalized microdose packs — tuned for creative flow and emotional clarity. Reach out via our contact page for private requests or curated sets.
+      Our July blend drop is available now via direct request — designed for emotional clarity and creativity.
+      <br><br>
+      🔗 <a href="https://t.me/yourgroup" target="_blank">Join our private Telegram space</a> for more info and to get notified first.
     </p>
   </section>
 
+  <!-- ✅ Sample Post 2 -->
   <section class="post">
-    <h2>🍄 Cultivation Tip: Humidity vs. Airflow</h2>
+    <div class="date">🗓️ June 28, 2025</div>
+    <h2>📽️ Psilocybin & ADHD – What the Research Says</h2>
     <p>
-      One of the most common questions we get is about balancing moisture and air for home grow setups. Our advice: indirect airflow is 🔑. Never blast your tubs. And always keep temps in check. More tips to come in future drops.
+      Microdosing may help improve focus and executive function in those with attention issues. We curated this 7-min video breaking it down.
+      <br><br>
+      ▶️ <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch now on YouTube</a>
     </p>
   </section>
+
+  <!-- ✅ Sample Post 3 -->
+  <section class="post">
+    <div class="date">🗓️ June 21, 2025</div>
+    <h2>🧪 Cultivation Tip: Humidity vs. Airflow</h2>
+    <p>
+      Never sacrifice clean airflow for moisture — indirect fan circulation is best. We’ve added 5 new tips in the guide below.
+      <br><br>
+      📄 <a href="https://drive.google.com/yourguide" target="_blank">Download the Grow Guide (PDF)</a>
+    </p>
+  </section>
+
+  <!-- 🔁 Future posts: just copy one of the <section class="post"> blocks above -->
 
   <a class="back-link" href="index.html">← Back to Home</a>
 </body>
