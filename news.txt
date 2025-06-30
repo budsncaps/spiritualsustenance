@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUDS & CAPS CO | News & Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #1fc744, #1f2d1f);
+      color: #e4ffe4;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 42px;
+      margin: 0;
+      text-shadow: 2px 2px 6px #00ffaa;
+    }
+
+    .post {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #39e39a;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .post h2 {
+      font-size: 24px;
+      color: #aaffdd;
+    }
+
+    .post p {
+      line-height: 1.6;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 30px auto;
+      color: #9effc9;
+      text-decoration: underline;
+      font-size: 18px;
+    }
+
+    .back-link:hover {
+      color: #d0ffd0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>News & Blog</h1>
+    <p>Insights, drops, and mindful exploration from the BUDS & CAPS community</p>
+  </header>
+
+  <section class="post">
+    <h2>🌕 Full Moon Microdose Drop – July 2025</h2>
+    <p>
+      We’ve dropped a new batch of personalized microdose packs — tuned for creative flow and emotional clarity. Reach out via our contact page for private requests or curated sets.
+    </p>
+  </section>
+
+  <section class="post">
+    <h2>🍄 Cultivation Tip: Humidity vs. Airflow</h2>
+    <p>
+      One of the most common questions we get is about balancing moisture and air for home grow setups. Our advice: indirect airflow is 🔑. Never blast your tubs. And always keep temps in check. More tips to come in future drops.
+    </p>
+  </section>
+
+  <a class="back-link" href="index.html">← Back to Home</a>
+</body>
+</html>
