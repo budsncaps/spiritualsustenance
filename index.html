@@ -13,6 +13,7 @@
       color: #e4ffe4;
       text-align: center;
     }
+
     header {
       padding: 80px 20px 40px;
       background-image: url('https://images.unsplash.com/photo-1603651804762-9c2f9c9614e4?auto=format&fit=crop&w=1200&q=80');
@@ -23,12 +24,14 @@
       color: #ffffff;
       text-shadow: 2px 2px 6px #000;
     }
+
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 48px;
       margin: 0;
       animation: glow 2s ease-in-out infinite alternate;
     }
+
     @keyframes glow {
       from {
         text-shadow: 2px 2px 6px #00ffae, 0 0 10px #00ffae;
@@ -37,11 +40,19 @@
         text-shadow: 2px 2px 8px #00ffff, 0 0 15px #00ffff;
       }
     }
+
+    @keyframes pulse {
+      0% { transform: scale(1); text-shadow: 0 0 4px #7affd6; }
+      50% { transform: scale(1.15); text-shadow: 0 0 12px #7affd6; }
+      100% { transform: scale(1); text-shadow: 0 0 4px #7affd6; }
+    }
+
     .about, .news, .contact {
       padding: 40px 20px;
       max-width: 800px;
       margin: auto;
     }
+
     .section-title {
       font-size: 28px;
       margin-bottom: 10px;
@@ -49,6 +60,7 @@
       display: inline-block;
       padding-bottom: 5px;
     }
+
     .about ul {
       list-style: none;
       padding: 0;
@@ -57,18 +69,24 @@
       max-width: 700px;
       margin: 20px auto;
     }
+
     .about p {
       margin-bottom: 20px;
     }
+
     .contact-icons a {
       margin: 10px;
       text-decoration: none;
       color: #e4ffe4;
       font-size: 20px;
       display: inline-block;
+      animation: pulse 2.5s infinite ease-in-out;
+      transition: transform 0.3s ease;
     }
+
     .contact-icons a:hover {
       color: #9fda9f;
+      transform: scale(1.2);
     }
   </style>
 </head>
