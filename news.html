@@ -171,17 +171,20 @@
       color: #d0ffd0;
     }
 
-    /* Responsive Fixes */
+    /* Responsive for Mobile/Tablets */
     @media (max-width: 800px) {
       .sidebar {
-        position: static;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.9);
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 10px;
-        margin: 10px auto;
-        background-color: rgba(0,0,0,0.6);
         padding: 8px 12px;
+        border-radius: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.7);
       }
 
       .sidebar a {
@@ -218,15 +221,6 @@
 
 <body>
 
-  <!-- Floating Sidebar -->
-  <div class="sidebar">
-    <a href="#drops">🌿 Drops</a>
-    <a href="#wellness">🧠 Wellness & News</a>
-    <a href="#education">📚 Education</a>
-    <a href="#cultivation">🧪 Cultivation</a>
-    <a href="#top">🔝 Top</a>
-  </div>
-
   <!-- Header -->
   <header id="top">
     <h1>News, Blog & Resource Sharing</h1>
@@ -234,42 +228,47 @@
       Updates, drops, tips, and plant-powered insights from the <strong>SPIRITUAL SUSTENANCE</strong> community.
       Expect underground news, wellness education, and curated finds.
     </p>
+
+    <!-- Floating Sidebar (Menu) -->
+    <div class="sidebar">
+      <a href="#drops">🌿 Drops</a>
+      <a href="#wellness">🧠 Wellness & News</a>
+      <a href="#education">📚 Education</a>
+      <a href="#cultivation">🧪 Cultivation</a>
+      <a href="#top">🔝 Top</a>
+    </div>
   </header>
 
   <!-- 🌿 Product Drops -->
   <div id="drops" class="category-block">
     <h2>🌿 Product Drops</h2>
-
     <div class="post">
       <div class="date">🗓️ July 02, 2025</div>
       <h3>🧀 C H E E S E – LIVE</h3>
       <p>
-        Our July <strong>Cheese</strong> Message us directly for info — limited and curated as always.
+        Our July <strong>Cheese</strong> — message us directly for info. Limited and curated as always.
         <br><br>
         🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
       </p>
     </div>
-
     <div class="post">
       <div class="date">🗓️ July 02, 2025</div>
       <h3>🧀 JH – LIVE</h3>
       <p>
-        Our July <strong>Jack Herrer</strong> Message us directly for info — limited and curated as always.
+        Our July <strong>Jack Herrer</strong> — message us directly for info. Limited and curated as always.
         <br><br>
         🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
       </p>
     </div>
-
     <div class="post">
       <div class="date">🗓️ July 02, 2025</div>
-      <h3>🍄 FUNGI  – LIVE</h3>
+      <h3>🍄 FUNGI – LIVE</h3>
       <p>
-        Our July <strong>Dried Fungi </strong>Curated for balance and clarity. DM for details regarding strains and further details.
+        Our July <strong>Dried Fungi</strong> curated for balance and clarity. DM for details.
         <br><br>
         🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
       </p>
     </div>
-
     <div class="post">
       <div class="date">🗓️ July 02, 2025</div>
       <h3>🍄 Psilocybin Edibles – Launching Soon</h3>
@@ -279,7 +278,6 @@
         🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
       </p>
     </div>
-
     <div class="post">
       <div class="date">🗓️ June 30, 2025</div>
       <h3>🌕 Full Moon Microdose Drop – Now Live</h3>
@@ -294,34 +292,31 @@
   <!-- 🧠 Wellness -->
   <div id="wellness" class="category-block">
     <h2>🧠 Wellness & News</h2>
-
     <div class="post">
       <div class="date">🗓️ Jan 13, 2025</div>
-      <h3>South Africa’s cannabis market: preventing misuse or missed opportunities</h3>
+      <h3>South Africa’s Cannabis Market: Preventing Misuse or Missed Opportunities</h3>
       <p>
-        Macroeconomic trends, such as developments in legislation and regulations, are the primary drivers and constraints for the South African cannabis market’s current and medium-to-long-term performance.
+        How legislation and economics shape South Africa's cannabis market.
         <br><br>
-        ▶️ <a href="https://www.bizcommunity.com/article/south-africas-cannabis-market-preventing-misuse-or-missed-opportunities-920494a?utm_source=chatgpt.com" target="_blank"> READ NOW</a>
+        ▶️ <a href="https://www.bizcommunity.com/article/south-africas-cannabis-market-preventing-misuse-or-missed-opportunities-920494a?utm_source=chatgpt.com" target="_blank">READ NOW</a>
       </p>
     </div>
-
     <div class="post">
       <div class="date">🗓️ Jan 13, 2025</div>
-      <h3>Discovering a ‘magic’ mushroom was no trick</h3>
+      <h3>Discovering a ‘Magic’ Mushroom Was No Trick</h3>
       <p>
-       Researcher Alexander Bradshaw and team uncover a new fungi species.
+        Researcher Alexander Bradshaw and team uncover a new fungi species.
         <br><br>
-        ▶️ <a href="#"> READ NOW</a>
+        ▶️ <a href="#">READ NOW</a>
       </p>
     </div>
-
     <div class="post">
       <div class="date">🗓️ June 4, 2024</div>
-      <h3>Two new species of Psilocybe mushrooms discovered in southern Africa</h3>
+      <h3>Two New Psilocybe Species Discovered in Southern Africa</h3>
       <p>
-        In a new paper, researchers and citizen mycologists describe the two new species as Psilocybe ingeli and Psilocybe maluti. The paper also contains information on the traditional use of P. maluti by Basotho traditional healers from the mountain kingdom of Lesotho. According to the researchers, this appears to be the only recorded first-hand report of hallucinogenic mushrooms being used traditionally in Africa.
+        Introducing Psilocybe ingeli and Psilocybe maluti. Traditional use of P. maluti by Basotho healers noted.
         <br><br>
-        ▶️ <a href="https://www.sciencedaily.com/releases/2024/07/240702161542.htm?utm_source=chatgpt.com" target="_blank"> READ NOW</a>
+        ▶️ <a href="https://www.sciencedaily.com/releases/2024/07/240702161542.htm?utm_source=chatgpt.com" target="_blank">READ NOW</a>
       </p>
     </div>
   </div>
@@ -329,12 +324,11 @@
   <!-- 📚 Education -->
   <div id="education" class="category-block">
     <h2>📚 Education & Resources</h2>
-
     <div class="post">
       <div class="date">🗓️ June 21, 2025</div>
-      <h3>🧠 Understanding Microdosing – Beginners Guide</h3>
+      <h3>🧠 Understanding Microdosing – Beginner’s Guide</h3>
       <p>
-        New to microdosing? Check out this comprehensive beginner’s guide to help you navigate safe practices and optimal outcomes.
+        New to microdosing? Check out this comprehensive guide for safe practices and optimal outcomes.
         <br><br>
         📄 <a href="#">Read the Guide</a>
       </p>
@@ -344,14 +338,13 @@
   <!-- 🧪 Cultivation -->
   <div id="cultivation" class="category-block">
     <h2>🧪 Cultivation Tips</h2>
-
     <div class="post">
       <div class="date">🗓️ June 21, 2025</div>
       <h3>🧪 Harvesting & Curing Cannabis Plants</h3>
       <p>
-        We are here to ensure the fruits of your labour don't go to waste by helping you through the process of Harvesting & Curing Cannabis Plants. Imagine losing your precious cannabis because you missed a single step while harvesting your cannabis plant. Even worse, you used the wrong equipment. These errors can be avoided if you read this article.
+        Avoid common harvesting mistakes. Read our guide on how to properly harvest and cure cannabis.
         <br><br>
-        📄 <a href="https://growguru.co.za/blogs/hydroponic/harvesting-curing-cannabis-plants" target="_blank"> READ NOW</a>
+        📄 <a href="https://growguru.co.za/blogs/hydroponic/harvesting-curing-cannabis-plants" target="_blank">READ NOW</a>
       </p>
     </div>
   </div>
