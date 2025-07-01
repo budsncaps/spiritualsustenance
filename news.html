@@ -6,10 +6,8 @@
   <meta name="description" content="News and updates from SPIRITUAL SUSTENANCE — your plant-powered community." />
   <title>SPIRITUAL SUSTENANCE | News, Blog & Resource Sharing</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
   <style>
     :root {
       --primary: #00ffae;
@@ -47,10 +45,6 @@
       animation: glow 2.5s ease-in-out infinite alternate;
     }
 
-    h2 {
-      color: var(--accent);
-    }
-
     @keyframes glow {
       from { text-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary); }
       to { text-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent); }
@@ -80,6 +74,7 @@
       font-size: 32px;
       margin-bottom: 20px;
       text-shadow: 1px 1px 6px var(--primary);
+      color: var(--accent);
     }
 
     .post {
@@ -124,19 +119,6 @@
       margin-bottom: 10px;
     }
 
-    .back-link {
-      display: inline-block;
-      margin: 50px auto 30px;
-      color: var(--accent);
-      text-decoration: underline;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-
-    .back-link:hover {
-      color: #d0ffd0;
-    }
-
     footer {
       background-color: rgba(0,0,0,0.8);
       color: #aaa;
@@ -145,80 +127,35 @@
       font-size: 14px;
     }
 
-    /* Sidebar – Desktop Only */
-    @media (min-width: 801px) {
-      .sidebar {
-        position: fixed;
-        top: 100px;
-        left: 20px;
-        background-color: rgba(0, 0, 0, 0.7);
-        border: 1px solid var(--accent);
-        border-radius: 12px;
-        padding: 10px 15px;
-        z-index: 1000;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      }
-
-      .sidebar a {
-        display: block;
-        color: var(--accent);
-        text-decoration: none;
-        margin: 8px 0;
-        font-size: 16px;
-        transition: color 0.3s;
-      }
-
-      .sidebar a:hover {
-        color: #d0ffd0;
-      }
-    }
-
-    /* Hamburger (Mobile Only) */
-    .hamburger {
-      display: none;
+    /* Sidebar (Desktop) */
+    .sidebar {
       position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 28px;
-      background: rgba(0, 0, 0, 0.8);
-      color: var(--accent);
-      padding: 8px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      z-index: 1001;
-    }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 60px;
-      left: 15px;
-      background: rgba(0, 0, 0, 0.95);
-      padding: 15px;
+      top: 100px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--accent);
       border-radius: 12px;
+      padding: 10px 15px;
       z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
 
-    .mobile-menu a {
+    .sidebar a {
       display: block;
       color: var(--accent);
       text-decoration: none;
-      padding: 8px 0;
+      margin: 8px 0;
+      font-size: 16px;
+      transition: color 0.3s;
     }
 
-    .mobile-menu a:hover {
+    .sidebar a:hover {
       color: #d0ffd0;
     }
 
-    .mobile-menu.show {
-      display: block;
-    }
-
-    /* Back to Top Button */
-    .back-to-top {
+    /* Floating Buttons */
+    .back-to-top, .back-to-home {
       position: fixed;
-      bottom: 20px;
       right: 20px;
       background: rgba(0, 0, 0, 0.85);
       color: var(--accent);
@@ -231,16 +168,71 @@
       z-index: 1000;
     }
 
-    .back-to-top:hover {
+    .back-to-top:hover, .back-to-home:hover {
       background: rgba(32, 64, 32, 0.95);
     }
 
-    /* Hide Sidebar on Mobile */
+    .back-to-top {
+      bottom: 20px;
+    }
+
+    .back-to-home {
+      bottom: 80px;
+    }
+
+    /* Hamburger Button (Mobile) */
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.85);
+      border: 1px solid var(--accent);
+      padding: 10px 14px;
+      border-radius: 8px;
+      z-index: 2000;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .hamburger:hover {
+      background-color: rgba(32, 64, 32, 0.95);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(0,0,0,0.95);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 10px 15px;
+      z-index: 1500;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: var(--accent);
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      color: #d0ffd0;
+    }
+
+    /* Responsive */
     @media (max-width: 800px) {
       .sidebar {
         display: none;
       }
-
       .hamburger {
         display: block;
       }
@@ -250,98 +242,78 @@
 
 <body>
 
-  <!-- Hamburger (Mobile) -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <nav class="mobile-menu" id="mobileMenu">
-    <a href="#drops">🌿 Drops</a>
-    <a href="#wellness">🧠 Wellness & News</a>
-    <a href="#education">📚 Education</a>
-    <a href="#cultivation">🧪 Cultivation</a>
-    <a href="#top">🔝 Top</a>
-  </nav>
-
   <!-- Header -->
   <header id="top">
     <h1>News, Blog & Resource Sharing</h1>
     <p class="intro">
       Updates, drops, tips, and plant-powered insights from the <strong>SPIRITUAL SUSTENANCE</strong> community.
-      Expect underground news, wellness education, and curated finds.
     </p>
-
-    <!-- Sidebar (Desktop) -->
-    <div class="sidebar">
-      <a href="#drops">🌿 Drops</a>
-      <a href="#wellness">🧠 Wellness & News</a>
-      <a href="#education">📚 Education</a>
-      <a href="#cultivation">🧪 Cultivation</a>
-      <a href="#top">🔝 Top</a>
-    </div>
   </header>
+
+  <!-- Sidebar (Desktop) -->
+  <div class="sidebar">
+    <a href="index.html">🏠 Home</a>
+    <a href="#drops">🌿 Drops</a>
+    <a href="#wellness">🧠 Wellness & News</a>
+    <a href="#education">📚 Education</a>
+    <a href="#cultivation">🧪 Cultivation</a>
+    <a href="#top">🔝 Top</a>
+  </div>
+
+  <!-- Hamburger (Mobile) -->
+  <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="#drops">🌿 Drops</a>
+    <a href="#wellness">🧠 Wellness & News</a>
+    <a href="#education">📚 Education</a>
+    <a href="#cultivation">🧪 Cultivation</a>
+    <a href="#top">🔝 Top</a>
+  </div>
+
+  <!-- Floating Buttons -->
+  <a href="#top" class="back-to-top">⬆️</a>
+  <a href="index.html" class="back-to-home">🏠</a>
 
   <!-- 🌿 Product Drops -->
   <div id="drops" class="category-block">
     <h2>🌿 Product Drops</h2>
-    <!-- Posts Here -->
-    <div class="post">
-      <div class="date">🗓️ July 02, 2025</div>
-      <h3>🧀 C H E E S E – LIVE</h3>
-      <p>Our July <strong>Cheese</strong> — message us directly for info.<br><br>
-      🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a></p>
-    </div>
-    <!-- Add more posts as needed -->
+    <!-- Your posts here -->
   </div>
 
   <!-- 🧠 Wellness -->
   <div id="wellness" class="category-block">
     <h2>🧠 Wellness & News</h2>
-    <div class="post">
-      <div class="date">🗓️ Jan 13, 2025</div>
-      <h3>South Africa’s Cannabis Market</h3>
-      <p>How legislation and economics shape the market.<br><br>
-      ▶️ <a href="#">READ NOW</a></p>
-    </div>
+    <!-- Your posts here -->
   </div>
 
   <!-- 📚 Education -->
   <div id="education" class="category-block">
     <h2>📚 Education & Resources</h2>
-    <div class="post">
-      <div class="date">🗓️ June 21, 2025</div>
-      <h3>🧠 Understanding Microdosing – Guide</h3>
-      <p>New to microdosing? Check out this comprehensive guide.<br><br>
-      📄 <a href="#">Read the Guide</a></p>
-    </div>
+    <!-- Your posts here -->
   </div>
 
   <!-- 🧪 Cultivation -->
   <div id="cultivation" class="category-block">
     <h2>🧪 Cultivation Tips</h2>
-    <div class="post">
-      <div class="date">🗓️ June 21, 2025</div>
-      <h3>🧪 Harvesting & Curing Cannabis Plants</h3>
-      <p>Avoid common mistakes. Read our guide.<br><br>
-      📄 <a href="#">READ NOW</a></p>
-    </div>
+    <!-- Your posts here -->
   </div>
-
-  <!-- Back to Home -->
-  <a class="back-link" href="index.html">← Back to Home</a>
-
-  <!-- Back to Top Button -->
-  <a href="#top" class="back-to-top">⬆️</a>
 
   <!-- Footer -->
   <footer>
     © 2025 Spiritual Sustenance CO | All Rights Reserved
   </footer>
 
-  <!-- Script for Hamburger -->
+  <!-- Script for Mobile Menu -->
   <script>
     function toggleMenu() {
       const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('show');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
     }
   </script>
-
 </body>
 </html>
