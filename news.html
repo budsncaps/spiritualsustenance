@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="News and updates from SPIRITUAL SUSTENANCE — your plant-powered community." />
   <title>SPIRITUAL SUSTENANCE | News, Blog & Resource Sharing</title>
-  
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
-  
+
   <!-- Styles -->
   <style>
     :root {
@@ -47,6 +47,10 @@
       animation: glow 2.5s ease-in-out infinite alternate;
     }
 
+    h2 {
+      color: var(--accent);
+    }
+
     @keyframes glow {
       from { text-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary); }
       to { text-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent); }
@@ -60,9 +64,26 @@
       line-height: 1.6;
     }
 
+    .category-block {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 2px solid rgba(57, 227, 154, 0.5);
+      border-radius: 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .category-block h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 6px var(--primary);
+    }
+
     .post {
-      max-width: 800px;
-      margin: 30px auto;
+      margin: 20px auto;
       padding: 20px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(57, 227, 154, 0.4);
@@ -77,8 +98,8 @@
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
     }
 
-    .post h2 {
-      font-size: 24px;
+    .post h3 {
+      font-size: 22px;
       color: var(--accent);
       margin-top: 0;
     }
@@ -170,8 +191,12 @@
         font-size: 36px;
       }
 
-      .post h2 {
-        font-size: 20px;
+      .category-block h2 {
+        font-size: 26px;
+      }
+
+      .post h3 {
+        font-size: 18px;
       }
     }
   </style>
@@ -182,8 +207,9 @@
   <!-- Floating Sidebar -->
   <div class="sidebar">
     <a href="#drops">🌿 Drops</a>
-    <a href="#education">📚 Resources</a>
     <a href="#wellness">🧠 Wellness</a>
+    <a href="#education">📚 Education</a>
+    <a href="#cultivation">🧪 Cultivation</a>
     <a href="#top">🔝 Top</a>
   </div>
 
@@ -196,58 +222,85 @@
     </p>
   </header>
 
-  <!-- 🌿 Drops Section -->
-  <section id="drops" class="post">
-    <div class="date">🗓️ July 02, 2025</div>
-    <h2>🧀 C H E E S E – Drop Incoming</h2>
-    <p>
-      Our July <strong>Cheese</strong> drop goes live soon! Message us directly for info — limited and curated as always.
-      <br><br>
-      🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-    </p>
-  </section>
+  <!-- 🌿 Product Drops -->
+  <div id="drops" class="category-block">
+    <h2>🌿 Product Drops</h2>
 
-  <section class="post">
-    <div class="date">🗓️ July 02, 2025</div>
-    <h2>🍄 P S I L O C Y B I N  _ E D I B L E S – Launching Soon</h2>
-    <p>
-      Our July <strong>Psilocybin Edibles</strong> are landing shortly — curated for balance and clarity. DM for details.
-      <br><br>
-      🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-    </p>
-  </section>
+    <div class="post">
+      <div class="date">🗓️ July 02, 2025</div>
+      <h3>🧀 C H E E S E – Drop Incoming</h3>
+      <p>
+        Our July <strong>Cheese</strong> drop goes live soon! Message us directly for info — limited and curated as always.
+        <br><br>
+        🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
+      </p>
+    </div>
 
-  <section class="post">
-    <div class="date">🗓️ June 30, 2025</div>
-    <h2>🌕 Full Moon Microdose Drop – Now Live</h2>
-    <p>
-      Our new blend is officially live — designed for emotional clarity, creativity, and focus.
-      <br><br>
-      🔗 <a href="https://t.me/yourgroup" target="_blank">Join our private Telegram space</a> for access and updates.
-    </p>
-  </section>
+    <div class="post">
+      <div class="date">🗓️ July 02, 2025</div>
+      <h3>🍄 Psilocybin Edibles – Launching Soon</h3>
+      <p>
+        Our July <strong>Psilocybin Edibles</strong> are landing shortly — curated for balance and clarity. DM for details.
+        <br><br>
+        🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
+      </p>
+    </div>
 
-  <!-- 📚 Education Section -->
-  <section id="education" class="post">
-    <div class="date">🗓️ June 28, 2025</div>
-    <h2>📽️ Psilocybin & ADHD – What the Research Says</h2>
-    <p>
-      Microdosing may improve focus and executive function for some. We've curated a 7-minute video breaking it down.
-      <br><br>
-      ▶️ <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch now on YouTube</a>
-    </p>
-  </section>
+    <div class="post">
+      <div class="date">🗓️ June 30, 2025</div>
+      <h3>🌕 Full Moon Microdose Drop – Now Live</h3>
+      <p>
+        Our new blend is officially live — designed for emotional clarity, creativity, and focus.
+        <br><br>
+        🔗 <a href="https://t.me/yourgroup" target="_blank">Join our private Telegram space</a> for access and updates.
+      </p>
+    </div>
+  </div>
 
-  <!-- 🧠 Wellness Section -->
-  <section id="wellness" class="post">
-    <div class="date">🗓️ June 21, 2025</div>
-    <h2>🧪 Cultivation Tip: Humidity vs. Airflow</h2>
-    <p>
-      Don't sacrifice clean airflow for humidity. Indirect fan circulation is best. Check our guide for 5 key tips.
-      <br><br>
-      📄 <a href="https://drive.google.com/yourguide" target="_blank">Download the Grow Guide (PDF)</a>
-    </p>
-  </section>
+  <!-- 🧠 Wellness -->
+  <div id="wellness" class="category-block">
+    <h2>🧠 Wellness & Microdosing</h2>
+
+    <div class="post">
+      <div class="date">🗓️ June 28, 2025</div>
+      <h3>📽️ Psilocybin & ADHD – What the Research Says</h3>
+      <p>
+        Microdosing may improve focus and executive function for some. We've curated a 7-minute video breaking it down.
+        <br><br>
+        ▶️ <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch now on YouTube</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 📚 Education -->
+  <div id="education" class="category-block">
+    <h2>📚 Education & Resources</h2>
+
+    <div class="post">
+      <div class="date">🗓️ June 21, 2025</div>
+      <h3>🧠 Understanding Microdosing – Beginners Guide</h3>
+      <p>
+        New to microdosing? Check out this comprehensive beginner’s guide to help you navigate safe practices and optimal outcomes.
+        <br><br>
+        📄 <a href="#">Read the Guide</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 🧪 Cultivation -->
+  <div id="cultivation" class="category-block">
+    <h2>🧪 Cultivation Tips</h2>
+
+    <div class="post">
+      <div class="date">🗓️ June 21, 2025</div>
+      <h3>🧪 Cultivation Tip: Humidity vs. Airflow</h3>
+      <p>
+        Don't sacrifice clean airflow for humidity. Indirect fan circulation is best. Check our guide for 5 key tips.
+        <br><br>
+        📄 <a href="https://drive.google.com/yourguide" target="_blank">Download the Grow Guide (PDF)</a>
+      </p>
+    </div>
+  </div>
 
   <!-- 🔗 Back to Home -->
   <a class="back-link" href="index.html">← Back to Home</a>
