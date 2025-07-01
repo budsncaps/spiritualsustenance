@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="News and updates from SPIRITUAL SUSTENANCE — your plant-powered community." />
-  <title>SPIRITUAL SUSTENANCE | News,Blog & Resource Sharing</title>
+  <title>SPIRITUAL SUSTENANCE | News, Blog & Resource Sharing</title>
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
@@ -124,6 +124,47 @@
       font-size: 14px;
     }
 
+    /* Floating Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 10px 15px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .sidebar a {
+      display: block;
+      color: var(--accent);
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #d0ffd0;
+    }
+
+    @media (max-width: 800px) {
+      .sidebar {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin: 10px auto;
+        background-color: rgba(0,0,0,0.6);
+        padding: 8px 12px;
+      }
+
+      .sidebar a {
+        margin: 0 10px;
+      }
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 36px;
@@ -138,16 +179,25 @@
 
 <body>
 
-  <header>
-    <h1>News,Blog & Resource Sharing</h1>
+  <!-- Floating Sidebar -->
+  <div class="sidebar">
+    <a href="#drops">🌿 Drops</a>
+    <a href="#education">📚 Resources</a>
+    <a href="#wellness">🧠 Wellness</a>
+    <a href="#top">🔝 Top</a>
+  </div>
+
+  <!-- Header -->
+  <header id="top">
+    <h1>News, Blog & Resource Sharing</h1>
     <p class="intro">
       Updates, drops, tips, and plant-powered insights from the <strong>SPIRITUAL SUSTENANCE</strong> community.
       Expect underground news, wellness education, and curated finds.
     </p>
   </header>
 
-  <!-- ✅ Post 1 -->
-  <section class="post">
+  <!-- 🌿 Drops Section -->
+  <section id="drops" class="post">
     <div class="date">🗓️ July 02, 2025</div>
     <h2>🧀 C H E E S E – Drop Incoming</h2>
     <p>
@@ -157,7 +207,6 @@
     </p>
   </section>
 
-  <!-- ✅ Post 2 -->
   <section class="post">
     <div class="date">🗓️ July 02, 2025</div>
     <h2>🍄 P S I L O C Y B I N  _ E D I B L E S – Launching Soon</h2>
@@ -168,7 +217,6 @@
     </p>
   </section>
 
-  <!-- ✅ Post 3 -->
   <section class="post">
     <div class="date">🗓️ June 30, 2025</div>
     <h2>🌕 Full Moon Microdose Drop – Now Live</h2>
@@ -179,8 +227,8 @@
     </p>
   </section>
 
-  <!-- ✅ Post 4 -->
-  <section class="post">
+  <!-- 📚 Education Section -->
+  <section id="education" class="post">
     <div class="date">🗓️ June 28, 2025</div>
     <h2>📽️ Psilocybin & ADHD – What the Research Says</h2>
     <p>
@@ -190,8 +238,8 @@
     </p>
   </section>
 
-  <!-- ✅ Post 5 -->
-  <section class="post">
+  <!-- 🧠 Wellness Section -->
+  <section id="wellness" class="post">
     <div class="date">🗓️ June 21, 2025</div>
     <h2>🧪 Cultivation Tip: Humidity vs. Airflow</h2>
     <p>
