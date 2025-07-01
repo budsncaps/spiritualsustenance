@@ -171,32 +171,46 @@
       color: #d0ffd0;
     }
 
+    /* Responsive Fixes */
     @media (max-width: 800px) {
       .sidebar {
         position: static;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
         margin: 10px auto;
         background-color: rgba(0,0,0,0.6);
         padding: 8px 12px;
       }
 
       .sidebar a {
-        margin: 0 10px;
+        margin: 6px 10px;
+        font-size: 15px;
+        white-space: nowrap;
       }
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 36px;
+        font-size: 32px;
       }
 
       .category-block h2 {
-        font-size: 26px;
+        font-size: 24px;
       }
 
       .post h3 {
-        font-size: 18px;
+        font-size: 17px;
+      }
+
+      .sidebar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar a {
+        margin: 6px 0;
       }
     }
   </style>
@@ -291,22 +305,22 @@
       </p>
     </div>
 
-     <div class="post">
+    <div class="post">
       <div class="date">🗓️ Jan 13, 2025</div>
       <h3>Discovering a ‘magic’ mushroom was no trick</h3>
       <p>
-       Researcher Alexander Bradshaw and team uncover a new fungi species
+       Researcher Alexander Bradshaw and team uncover a new fungi species.
         <br><br>
-        ▶️ <a href="Discovering a ‘magic’ mushroom was no trick" target="_blank"> READ NOW</a>
+        ▶️ <a href="#"> READ NOW</a>
       </p>
     </div>
-
 
     <div class="post">
       <div class="date">🗓️ June 4, 2024</div>
       <h3>Two new species of Psilocybe mushrooms discovered in southern Africa</h3>
       <p>
-        In a new paper, researchers and citizen mycologists describe the two new species as Psilocybe ingeli and Psilocybe maluti. The paper also contains information on the traditional use of P. maluti by Basotho traditional healers from the mountain kingdom of Lesotho. According to the researchers, this appears to be the only recorded first-hand report of hallucinogenic mushrooms being used traditionally in Africa. <br><br>
+        In a new paper, researchers and citizen mycologists describe the two new species as Psilocybe ingeli and Psilocybe maluti. The paper also contains information on the traditional use of P. maluti by Basotho traditional healers from the mountain kingdom of Lesotho. According to the researchers, this appears to be the only recorded first-hand report of hallucinogenic mushrooms being used traditionally in Africa.
+        <br><br>
         ▶️ <a href="https://www.sciencedaily.com/releases/2024/07/240702161542.htm?utm_source=chatgpt.com" target="_blank"> READ NOW</a>
       </p>
     </div>
@@ -335,7 +349,7 @@
       <div class="date">🗓️ June 21, 2025</div>
       <h3>🧪 Harvesting & Curing Cannabis Plants</h3>
       <p>
-       We are here to ensure the fruits of your labour don't go to waste by helping you through the process of Harvesting & Curing Cannabis Plants. Imagine losing your precious cannabis because you missed a single step while harvesting your cannabis plant. Even worse, you used the wrong equipment. These errors can be avoided if you read this article.
+        We are here to ensure the fruits of your labour don't go to waste by helping you through the process of Harvesting & Curing Cannabis Plants. Imagine losing your precious cannabis because you missed a single step while harvesting your cannabis plant. Even worse, you used the wrong equipment. These errors can be avoided if you read this article.
         <br><br>
         📄 <a href="https://growguru.co.za/blogs/hydroponic/harvesting-curing-cannabis-plants" target="_blank"> READ NOW</a>
       </p>
