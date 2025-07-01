@@ -145,81 +145,120 @@
       font-size: 14px;
     }
 
-    /* Floating Sidebar */
-    .sidebar {
-      position: fixed;
-      top: 100px;
-      left: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 1px solid var(--accent);
-      border-radius: 12px;
-      padding: 10px 15px;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    /* Sidebar – Desktop Only */
+    @media (min-width: 801px) {
+      .sidebar {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: 1px solid var(--accent);
+        border-radius: 12px;
+        padding: 10px 15px;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      }
+
+      .sidebar a {
+        display: block;
+        color: var(--accent);
+        text-decoration: none;
+        margin: 8px 0;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .sidebar a:hover {
+        color: #d0ffd0;
+      }
     }
 
-    .sidebar a {
+    /* Hamburger (Mobile Only) */
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 28px;
+      background: rgba(0, 0, 0, 0.8);
+      color: var(--accent);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 15px;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px;
+      border-radius: 12px;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    }
+
+    .mobile-menu a {
       display: block;
       color: var(--accent);
       text-decoration: none;
-      margin: 8px 0;
-      font-size: 16px;
-      transition: color 0.3s;
+      padding: 8px 0;
     }
 
-    .sidebar a:hover {
+    .mobile-menu a:hover {
       color: #d0ffd0;
     }
 
-    /* Responsive for Mobile/Tablets */
-    @media (max-width: 800px) {
-      .sidebar {
-        position: sticky;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0,0,0,0.9);
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        padding: 8px 12px;
-        border-radius: 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.7);
-      }
-
-      .sidebar a {
-        margin: 6px 10px;
-        font-size: 15px;
-        white-space: nowrap;
-      }
+    .mobile-menu.show {
+      display: block;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 32px;
-      }
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.85);
+      color: var(--accent);
+      padding: 10px 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      transition: background 0.3s;
+      z-index: 1000;
+    }
 
-      .category-block h2 {
-        font-size: 24px;
-      }
+    .back-to-top:hover {
+      background: rgba(32, 64, 32, 0.95);
+    }
 
-      .post h3 {
-        font-size: 17px;
-      }
-
+    /* Hide Sidebar on Mobile */
+    @media (max-width: 800px) {
       .sidebar {
-        flex-direction: column;
-        align-items: center;
+        display: none;
       }
 
-      .sidebar a {
-        margin: 6px 0;
+      .hamburger {
+        display: block;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Hamburger (Mobile) -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#drops">🌿 Drops</a>
+    <a href="#wellness">🧠 Wellness & News</a>
+    <a href="#education">📚 Education</a>
+    <a href="#cultivation">🧪 Cultivation</a>
+    <a href="#top">🔝 Top</a>
+  </nav>
 
   <!-- Header -->
   <header id="top">
@@ -229,7 +268,7 @@
       Expect underground news, wellness education, and curated finds.
     </p>
 
-    <!-- Floating Sidebar (Menu) -->
+    <!-- Sidebar (Desktop) -->
     <div class="sidebar">
       <a href="#drops">🌿 Drops</a>
       <a href="#wellness">🧠 Wellness & News</a>
@@ -242,51 +281,14 @@
   <!-- 🌿 Product Drops -->
   <div id="drops" class="category-block">
     <h2>🌿 Product Drops</h2>
+    <!-- Posts Here -->
     <div class="post">
       <div class="date">🗓️ July 02, 2025</div>
       <h3>🧀 C H E E S E – LIVE</h3>
-      <p>
-        Our July <strong>Cheese</strong> — message us directly for info. Limited and curated as always.
-        <br><br>
-        🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-      </p>
+      <p>Our July <strong>Cheese</strong> — message us directly for info.<br><br>
+      🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a></p>
     </div>
-    <div class="post">
-      <div class="date">🗓️ July 02, 2025</div>
-      <h3>🧀 JH – LIVE</h3>
-      <p>
-        Our July <strong>Jack Herrer</strong> — message us directly for info. Limited and curated as always.
-        <br><br>
-        🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-      </p>
-    </div>
-    <div class="post">
-      <div class="date">🗓️ July 02, 2025</div>
-      <h3>🍄 FUNGI – LIVE</h3>
-      <p>
-        Our July <strong>Dried Fungi</strong> curated for balance and clarity. DM for details.
-        <br><br>
-        🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-      </p>
-    </div>
-    <div class="post">
-      <div class="date">🗓️ July 02, 2025</div>
-      <h3>🍄 Psilocybin Edibles – Launching Soon</h3>
-      <p>
-        Our July <strong>Psilocybin Edibles</strong> are landing shortly — curated for balance and clarity. DM for details.
-        <br><br>
-        🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-      </p>
-    </div>
-    <div class="post">
-      <div class="date">🗓️ June 30, 2025</div>
-      <h3>🌕 Full Moon Microdose Drop – Now Live</h3>
-      <p>
-        Our new blend is officially live — designed for emotional clarity, creativity, and focus.
-        <br><br>
-        🔗 <a href="https://wa.me/27650840431">📱 Send Us a WhatsApp</a>
-      </p>
-    </div>
+    <!-- Add more posts as needed -->
   </div>
 
   <!-- 🧠 Wellness -->
@@ -294,30 +296,9 @@
     <h2>🧠 Wellness & News</h2>
     <div class="post">
       <div class="date">🗓️ Jan 13, 2025</div>
-      <h3>South Africa’s Cannabis Market: Preventing Misuse or Missed Opportunities</h3>
-      <p>
-        How legislation and economics shape South Africa's cannabis market.
-        <br><br>
-        ▶️ <a href="https://www.bizcommunity.com/article/south-africas-cannabis-market-preventing-misuse-or-missed-opportunities-920494a?utm_source=chatgpt.com" target="_blank">READ NOW</a>
-      </p>
-    </div>
-    <div class="post">
-      <div class="date">🗓️ Jan 13, 2025</div>
-      <h3>Discovering a ‘Magic’ Mushroom Was No Trick</h3>
-      <p>
-        Researcher Alexander Bradshaw and team uncover a new fungi species.
-        <br><br>
-        ▶️ <a href="#">READ NOW</a>
-      </p>
-    </div>
-    <div class="post">
-      <div class="date">🗓️ June 4, 2024</div>
-      <h3>Two New Psilocybe Species Discovered in Southern Africa</h3>
-      <p>
-        Introducing Psilocybe ingeli and Psilocybe maluti. Traditional use of P. maluti by Basotho healers noted.
-        <br><br>
-        ▶️ <a href="https://www.sciencedaily.com/releases/2024/07/240702161542.htm?utm_source=chatgpt.com" target="_blank">READ NOW</a>
-      </p>
+      <h3>South Africa’s Cannabis Market</h3>
+      <p>How legislation and economics shape the market.<br><br>
+      ▶️ <a href="#">READ NOW</a></p>
     </div>
   </div>
 
@@ -326,12 +307,9 @@
     <h2>📚 Education & Resources</h2>
     <div class="post">
       <div class="date">🗓️ June 21, 2025</div>
-      <h3>🧠 Understanding Microdosing – Beginner’s Guide</h3>
-      <p>
-        New to microdosing? Check out this comprehensive guide for safe practices and optimal outcomes.
-        <br><br>
-        📄 <a href="#">Read the Guide</a>
-      </p>
+      <h3>🧠 Understanding Microdosing – Guide</h3>
+      <p>New to microdosing? Check out this comprehensive guide.<br><br>
+      📄 <a href="#">Read the Guide</a></p>
     </div>
   </div>
 
@@ -341,19 +319,29 @@
     <div class="post">
       <div class="date">🗓️ June 21, 2025</div>
       <h3>🧪 Harvesting & Curing Cannabis Plants</h3>
-      <p>
-        Avoid common harvesting mistakes. Read our guide on how to properly harvest and cure cannabis.
-        <br><br>
-        📄 <a href="https://growguru.co.za/blogs/hydroponic/harvesting-curing-cannabis-plants" target="_blank">READ NOW</a>
-      </p>
+      <p>Avoid common mistakes. Read our guide.<br><br>
+      📄 <a href="#">READ NOW</a></p>
     </div>
   </div>
 
-  <!-- 🔗 Back to Home -->
+  <!-- Back to Home -->
   <a class="back-link" href="index.html">← Back to Home</a>
 
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top">⬆️</a>
+
+  <!-- Footer -->
   <footer>
     © 2025 Spiritual Sustenance CO | All Rights Reserved
   </footer>
+
+  <!-- Script for Hamburger -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
 </body>
 </html>
