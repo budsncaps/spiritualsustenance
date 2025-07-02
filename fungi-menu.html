@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Green Menu | SPIRITUAL SUSTENANCE - A guide to plant-based living and conscious choices." />
-  <title>Fungi Menu | SPIRITUAL SUSTENANCE</title>
+  <title>Green Menu | SPIRITUAL SUSTENANCE</title>
   <style>
     /* ===== Global Styles ===== */
     body {
@@ -47,7 +47,7 @@
       color: #d4f8d4;
     }
 
-    /* ===== Container/Main Content ===== */
+    /* ===== Main Container ===== */
     .container {
       max-width: 1000px;
       margin: 2rem auto;
@@ -78,62 +78,79 @@
     footer {
       background-color: #3a6b35;
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       margin-top: 2rem;
     }
 
     .footer-content {
-      max-width: 1100px;
+      max-width: 700px;
       margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
+      text-align: center;
     }
 
-    .footer-section {
-      flex: 1 1 250px;
-      min-width: 220px;
-    }
-
-    .footer-section h4 {
+    .footer-content h2 {
       margin-bottom: 1rem;
       color: #d4f8d4;
-      font-size: 1.2rem;
-      border-bottom: 1px solid #d4f8d4;
-      padding-bottom: 0.3rem;
     }
 
-    .footer-section p,
-    .footer-section a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .footer-section a:hover {
-      text-decoration: underline;
-    }
-
-    .socials {
+    .contact-icons {
       display: flex;
-      gap: 12px;
-      margin-top: 0.5rem;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
 
-    .socials a {
-      display: inline-block;
+    .contact-icons a {
       background-color: #2f5c29;
-      padding: 6px 10px;
-      border-radius: 6px;
       color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: 500;
-      font-size: 0.9rem;
+      transition: background-color 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .contact-icons a:hover {
+      background-color: #4d8a49;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #2f5c29;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      width: fit-content;
+      margin: auto;
       transition: background-color 0.3s;
     }
 
-    .socials a:hover {
+    button:hover {
       background-color: #4d8a49;
     }
 
@@ -145,14 +162,9 @@
     }
 
     /* ===== Responsive ===== */
-    @media (max-width: 700px) {
-      .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .socials {
-        justify-content: center;
+    @media (max-width: 600px) {
+      .contact-icons {
+        gap: 0.7rem;
       }
     }
   </style>
@@ -160,11 +172,11 @@
 <body>
   <header>
     <h1>SPIRITUAL SUSTENANCE</h1>
-    <p>🌱 Green Menu 🌱</p>
+    <p>Green Menu</p>
   </header>
 
   <div class="container">
-    <h2>Welcome to the Fungi Menu</h2>
+    <h2>Welcome to the Green Menu</h2>
     <p>Your curated guide to Plant based medicines</p>
 
     <h3>🌱 Featured Recipes</h3>
@@ -191,25 +203,24 @@
 
   <footer>
     <div class="footer-content">
-      <section class="contact" id="contact">
-    <div class="section-title">Connect With Us</div>
-    <div class="contact-icons">
-      <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
-      <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
-      <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
+      <h2>Connect With Us</h2>
+
+      <div class="contact-icons">
+        <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
+        <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
+        <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
+      </div>
+
+      <h3>Or send us a message:</h3>
+      <form action="https://formsubmit.co/budsdotcaps@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
 
-    <h3 style="margin-top:30px;">Or send us a message:</h3>
-    <form action="https://formsubmit.co/budsdotcaps@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-      
-    </div>
     <div class="copyright">
       &copy; 2025 SPIRITUAL SUSTENANCE | All Rights Reserved
     </div>
