@@ -7,363 +7,147 @@
   <title>SPIRITUAL SUSTENANCE | News, Blog & Resource Sharing</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <style>
-    :root {
-      --primary: #00ffae;
-      --secondary: #1fc744;
-      --bg-dark: #1f2d1f;
-      --text-light: #e4ffe4;
-      --accent: #aaffdd;
-    }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
     body {
-      margin: 0;
+      background: linear-gradient(to bottom, #1fc744, #1f2d1f);
+      color: #e4ffe4;
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to bottom, var(--secondary), var(--bg-dark));
-      color: var(--text-light);
+      margin: 0;
     }
 
     header {
-      padding: 80px 20px 40px;
-      background: url('header-bg.jpg') center/cover no-repeat;
-      background-color: rgba(0, 0, 0, 0.5);
-      background-blend-mode: overlay;
       text-align: center;
+      padding: 60px 20px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
     }
 
     h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 48px;
-      margin: 0;
-      text-shadow: 2px 2px 6px var(--primary);
-      animation: glow 2.5s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary); }
-      to { text-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent); }
+      font-size: 40px;
+      color: #00ffae;
     }
 
     .intro {
-      font-size: 18px;
       max-width: 800px;
-      margin: 20px auto 40px;
-      padding: 0 20px;
+      margin: 20px auto;
       line-height: 1.6;
     }
 
     .category-block {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 50px auto;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 2px solid rgba(57, 227, 154, 0.5);
-      border-radius: 24px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 170, 0.3);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
     }
 
     .category-block h2 {
       text-align: center;
-      font-size: 32px;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 6px var(--primary);
-      color: var(--accent);
+      color: #aaffdd;
     }
 
     .post {
-      margin: 20px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(57, 227, 154, 0.4);
-      border-radius: 16px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .post:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0, 255, 170, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
     }
 
     .post h3 {
-      font-size: 22px;
-      color: var(--accent);
       margin-top: 0;
+      color: #aaffdd;
     }
 
-    .post p {
-      line-height: 1.7;
-      font-size: 16px;
+    .post .date {
+      font-size: 0.9em;
+      color: #bbb;
     }
 
     .post a {
-      color: var(--accent);
+      color: #aaffdd;
       text-decoration: underline;
     }
 
-    .post a:hover {
-      color: #d6ffe9;
-    }
-
-    .date {
-      font-size: 14px;
-      color: #bbbbbb;
-      margin-bottom: 10px;
-    }
-
     footer {
-      background-color: rgba(0,0,0,0.8);
-      color: #aaa;
-      padding: 20px;
+      background: rgba(0,0,0,0.8);
       text-align: center;
-      font-size: 14px;
+      padding: 20px;
+      color: #aaa;
+      margin-top: 60px;
     }
 
-    /* Sidebar (Desktop) */
-    .sidebar {
-      position: fixed;
-      top: 100px;
-      left: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 1px solid var(--accent);
-      border-radius: 12px;
-      padding: 10px 15px;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-
-    .sidebar a {
+    .back-link {
       display: block;
-      color: var(--accent);
-      text-decoration: none;
-      margin: 8px 0;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    .sidebar a:hover {
-      color: #d0ffd0;
-    }
-
-    /* Floating Buttons */
-    .back-to-top, .back-to-home {
-      position: fixed;
-      right: 20px;
-      background: rgba(0, 0, 0, 0.85);
-      color: var(--accent);
-      padding: 10px 14px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 22px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      transition: background 0.3s;
-      z-index: 1000;
-    }
-
-    .back-to-top:hover, .back-to-home:hover {
-      background: rgba(32, 64, 32, 0.95);
-    }
-
-    .back-to-top {
-      bottom: 20px;
-    }
-
-    .back-to-home {
-      bottom: 80px;
-    }
-
-    /* Hamburger Button (Mobile) */
-    .hamburger {
-      display: none;
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: rgba(0, 0, 0, 0.85);
-      border: 1px solid var(--accent);
-      padding: 10px 14px;
-      border-radius: 8px;
-      z-index: 2000;
-      cursor: pointer;
-      color: var(--accent);
-      font-size: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    }
-
-    .hamburger:hover {
-      background-color: rgba(32, 64, 32, 0.95);
-    }
-
-    /* Mobile Menu */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 60px;
-      right: 20px;
-      background-color: rgba(0,0,0,0.95);
-      border: 1px solid var(--accent);
-      border-radius: 12px;
-      padding: 10px 15px;
-      z-index: 1500;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
-    }
-
-    .mobile-menu a {
-      display: block;
-      color: var(--accent);
-      text-decoration: none;
-      margin: 8px 0;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    .mobile-menu a:hover {
-      color: #d0ffd0;
-    }
-
-    /* Responsive */
-    @media (max-width: 800px) {
-      .sidebar {
-        display: none;
-      }
-      .hamburger {
-        display: block;
-      }
+      text-align: center;
+      margin: 40px auto;
+      color: #aaffdd;
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Header -->
-  <header id="top">
+  <header>
     <h1>News, Blog & Resource Sharing</h1>
     <p class="intro">
       Updates, drops, tips, and plant-powered insights from the <strong>SPIRITUAL SUSTENANCE</strong> community.
     </p>
   </header>
 
-  <!-- Sidebar (Desktop) -->
-  <div class="sidebar">
-    <a href="index.html">🏠 Home</a>
-    <a href="green-menu.html">🌿 Green Menu</a>
-    <a href="fungi-menu.html">🍄 Fungi Menu</a>
-    <a href="#drops">🛍️ Drops</a>
-    <a href="#wellness">🧠 Wellness & News</a>
-    <a href="#education">📚 Education</a>
-    <a href="#cultivation">🧪 Cultivation</a>
-    <a href="#top">🔝 Top</a>
-  </div>
-
-  <!-- Hamburger (Mobile) -->
-  <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">🏠 Home</a>
-    <a href="green-menu.html">🌿 Green Menu</a>
-    <a href="fungi-menu.html">🍄 Fungi Menu</a>
-    <a href="#drops">🛍️ Drops</a>
-    <a href="#wellness">🧠 Wellness & News</a>
-    <a href="#education">📚 Education</a>
-    <a href="#cultivation">🧪 Cultivation</a>
-    <a href="#top">🔝 Top</a>
-  </div>
-
-  <!-- Floating Buttons -->
-  <a href="#top" class="back-to-top">⬆️</a>
-  <a href="index.html" class="back-to-home" title="Home">🏠</a>
-  <a href="green-menu.html" class="back-to-home" style="bottom: 140px;" title="Green Menu">🌿</a>
-  <a href="fungi-menu.html" class="back-to-home" style="bottom: 200px;" title="Fungi Menu">🍄</a>
-
-  <!-- 🌿 Product Drops -->
   <div id="drops" class="category-block">
     <h2>🌿 Product Drops</h2>
-    <div class="post">
-      <div class="date">🗓️ July 02, 2025</div>
-      <h3>🧀 C H E E S E – LIVE</h3>
-      <p>July drop — <strong>Cheese</strong>. Message for info.<br><br>🔗 <a href="https://wa.me/27650840431">📱 WhatsApp</a></p>
-    </div>
-    <!-- Add other drops here -->
+    <div class="content"></div>
   </div>
 
-  <!-- 🧠 Wellness -->
   <div id="wellness" class="category-block">
     <h2>🧠 Wellness & News</h2>
-    <div class="post">
-      <div class="date">🗓️ May 17 , 2025</div>
-      <h3>Weed Prices Dropping</h3>
-      <p>
-        Why are weed prices dropping?
-        <br><br>
-        📄 <a href="https://x.com/PotCultureMag/status/1923551544647070042" target="_blank">READ NOW</a>
-      </p>
-    </div>
-
-    <div class="post">
-      <div class="date">🗓️ June 4, 2024</div>
-      <h3>Two new species of Psilocybe mushrooms discovered in southern Africa</h3>
-      <p>
-        In a new paper, researchers and citizen mycologists describe the two new species as Psilocybe ingeli and Psilocybe maluti. This includes information on traditional use by Basotho healers — one of the only recorded uses of hallucinogenic mushrooms in Africa.
-        <br><br>
-        ▶️ <a href="https://www.sciencedaily.com/releases/2024/07/240702161542.htm" target="_blank">READ NOW</a>
-      </p>
-    </div>
+    <div class="content"></div>
   </div>
 
-  <!-- 📚 Education -->
   <div id="education" class="category-block">
     <h2>📚 Education & Resources</h2>
-    <div class="post">
-      <div class="date">🗓️ June 21, 2025</div>
-      <h3>🧠DID YOU KNOW?</h3>
-      <p>
-        Some Mushrooms, like shiitaki & maitaki, have potention immune-boosting properties.
-        <br><br>
-        📄 <a href="https://x.com/Natures_Trunk/status/1728247135676875027">Read Here</a>
-      </p>
-    </div>
+    <div class="content"></div>
   </div>
 
-  <!-- 🧪 Cultivation -->
   <div id="cultivation" class="category-block">
-    <h2>🧪 Cultivation & Tips</h2>
-    <div class="post">
-      <div class="date">🗓️ June 21, 2025</div>
-      <h3>🧪 Harvesting & Curing Cannabis Plants</h3>
-      <p>
-        Learn how to properly harvest and cure your plants to preserve quality, potency, and aroma. Avoid common mistakes with this guide.
-        <br><br>
-        📄 <a href="https://growguru.co.za/blogs/hydroponic/harvesting-curing-cannabis-plants" target="_blank">READ NOW</a>
-      </p>
-    </div>
-    <div class="post">
-      <div class="date">🗓️ June 21, 2025</div>
-      <h3>🧪 AI & Cannabis Cultivation</h3>
-      <p>
-        AI-Powered Systems Poised to Reshape Cannabis Cultivation.
-        <br><br>
-        📄 <a href="https://x.com/CannatechNews/status/1937454738959700161" target="_blank">READ NOW</a>
-      </p>
-    </div>
+    <h2>🧪 Cultivation Tips</h2>
+    <div class="content"></div>
   </div>
 
-  <!-- Footer -->
+  <a class="back-link" href="index.html">← Back to Home</a>
+
   <footer>
     © 2025 Spiritual Sustenance CO | All Rights Reserved
   </footer>
 
-  <!-- Script for Mobile Menu -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
+    fetch('posts.json')
+      .then(response => response.json())
+      .then(data => {
+        const categories = ['drops', 'wellness', 'education', 'cultivation'];
+
+        categories.forEach(category => {
+          const container = document.querySelector(`#${category} .content`);
+          data[category].forEach(post => {
+            const postDiv = document.createElement('div');
+            postDiv.classList.add('post');
+            postDiv.innerHTML = `
+              <div class="date">🗓️ ${post.date}</div>
+              <h3>${post.title}</h3>
+              <p>${post.content}<br><br>
+              🔗 <a href="${post.link}" target="_blank">${post.linkText}</a></p>
+            `;
+            container.appendChild(postDiv);
+          });
+        });
+      })
+      .catch(error => console.error('Error loading posts:', error));
   </script>
 </body>
 </html>
