@@ -5,56 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Green Menu | SPIRITUAL SUSTENANCE - A guide to plant-based living and conscious choices." />
   <title>Green Menu | SPIRITUAL SUSTENANCE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
+  
   <style>
-    /* ===== Global Styles ===== */
+    :root {
+      --primary: #00ffae;
+      --secondary: #1fc744;
+      --bg-dark: #1f2d1f;
+      --text-light: #e4ffe4;
+      --accent: #aaffdd;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f7f5;
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, var(--secondary), var(--bg-dark));
+      color: var(--text-light);
     }
 
-    h1, h2, h3, h4 {
-      color: #3a6b35;
-    }
-
-    /* ===== Header ===== */
     header {
-      background-color: #3a6b35;
-      color: white;
-      padding: 1rem;
+      padding: 80px 20px 40px;
+      background: url('header-bg.jpg') center/cover no-repeat;
+      background-color: rgba(0, 0, 0, 0.6);
+      background-blend-mode: overlay;
       text-align: center;
     }
 
-    /* ===== Navigation ===== */
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px var(--primary);
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+
+    header p {
+      font-size: 20px;
+      margin: 8px 0 0;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary); }
+      to { text-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent); }
+    }
+
     nav {
-      background-color: #2f5c29;
+      background-color: rgba(0, 0, 0, 0.85);
       display: flex;
       justify-content: center;
       gap: 2rem;
-      padding: 0.5rem 0;
+      padding: 12px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     nav a {
-      color: #fff;
+      color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bold;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #d4f8d4;
+      color: #d6ffe9;
     }
 
-    /* ===== Container ===== */
     .container {
       max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 2px solid rgba(57, 227, 154, 0.5);
+      border-radius: 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    h2, h3 {
+      color: var(--accent);
+      text-shadow: 1px 1px 6px var(--primary);
+    }
+
+    p {
+      line-height: 1.6;
     }
 
     ul {
@@ -63,77 +100,67 @@
     }
 
     ul li {
-      background-color: #eaf6ea;
-      margin: 0.5rem 0;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(57, 227, 154, 0.4);
+      border-radius: 16px;
+      margin: 10px 0;
+      padding: 12px 16px;
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     ul li:hover {
-      background-color: #d4f8d4;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
 
-    /* ===== Footer ===== */
     footer {
-      background-color: #3a6b35;
-      color: white;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
+      background-color: rgba(0,0,0,0.8);
+      color: #aaa;
+      padding: 30px 10px;
+      text-align: center;
+      margin-top: 40px;
     }
 
     .footer-content {
       max-width: 1000px;
       margin: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .footer-content h2 {
-      margin: 0;
-      color: #d4f8d4;
-      border-bottom: 1px solid #d4f8d4;
-      padding-bottom: 0.3rem;
-      font-size: 1.5rem;
     }
 
     .socials {
       display: flex;
+      justify-content: center;
       gap: 14px;
       flex-wrap: wrap;
-      justify-content: center;
+      margin: 20px 0;
     }
 
     .socials a {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 8px;
       background-color: white;
-      color: #3a6b35;
+      color: var(--bg-dark);
       padding: 10px 16px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
-      border: 2px solid #3a6b35;
+      border: 2px solid var(--primary);
       box-shadow: 0 4px 8px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
     }
 
     .socials a:hover {
-      background-color: #3a6b35;
-      color: white;
+      background-color: var(--primary);
+      color: var(--bg-dark);
       transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     form {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      width: 100%;
+      margin: auto;
       max-width: 400px;
     }
 
@@ -141,14 +168,15 @@
       padding: 10px 12px;
       border-radius: 8px;
       border: none;
-      background-color: #f0f0f0;
+      background-color: rgba(255,255,255,0.08);
+      color: var(--text-light);
     }
 
     form button {
       padding: 10px 14px;
       border: none;
-      background-color: #d4f8d4;
-      color: #2f5c29;
+      background-color: var(--accent);
+      color: var(--bg-dark);
       border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
@@ -156,60 +184,54 @@
     }
 
     form button:hover {
-      background-color: #aee5ae;
+      background-color: var(--primary);
     }
 
     .copyright {
-      text-align: center;
-      margin-top: 2rem;
+      margin-top: 20px;
       font-size: 0.85rem;
       opacity: 0.8;
     }
 
-    /* ===== Responsive ===== */
     @media (max-width: 700px) {
       nav {
         flex-wrap: wrap;
       }
-      .footer-content {
-        text-align: center;
-      }
-      .socials {
-        justify-content: center;
-      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>SPIRITUAL SUSTENANCE</h1>
-    <p>🌱 GREEN 🌱</p>
+    <p>🌿 GREEN MENU 🌿</p>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="fungi-menu.html">🍄 Fungi 🍄</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">🏠 Home</a>
+    <a href="fungi-menu.html">🍄 Fungi</a>
+    <a href="#contact">📞 Contact</a>
   </nav>
 
   <div class="container">
-    <h2></h2>
-    <p>Your curated guide to plant-based medicines.</p>
+    <h2>🌱 Green Menu</h2>
+    <p>Your curated guide to plant-based medicines and conscious living.</p>
 
-    <p>If you can't find what you are looking for, please contact us. We will help you find it or connect you with colleagues who can assist!</p>
+    <p>If you can't find what you're looking for, contact us! We'll assist or connect you with someone who can help.</p>
 
-    <h3>🌱 Featured</h3>
+    <h3>🌟 Featured</h3>
     <p><em>Note: Stock may vary. Custom advance orders and strain enquiries welcomed.</em></p>
     <ul>
       <li>GELATO (Tunnel)</li>
       <li>SLURRI (Tunnel)</li>
       <li>COCONUT CHALICE (Indoor)</li>
-      <li>GOLDEN EXODUS CHEESE (<strong>AA-Grade</strong> - Tunnel) - Golden Exodus Cheese is a balanced hybrid that relaxes while keeping you focused, motivated, and productive.</li>
-      <li>JACK HERRER (<strong>AA-Grade</strong> - Tunnel) - Sativa dominant hybrid. Delivers an energizing, uplifting experience.</li>
+      <li>GOLDEN EXODUS CHEESE (<strong>AA-Grade</strong> - Tunnel) — Balanced hybrid that relaxes while keeping you focused, motivated, and productive.</li>
+      <li>JACK HERRER (<strong>AA-Grade</strong> - Tunnel) — Sativa dominant hybrid. Energizing, uplifting experience.</li>
     </ul>
 
-    <h3>🍃 Edibles</h3>
-    <p><em>Note: Depends on stock availability. Custom advance orders welcomed.</em></p>
+    <h3>🍪 Edibles</h3>
+    <p><em>Note: Availability may vary. Custom advance orders welcomed.</em></p>
     <ul>
       <li>Chocolates</li>
       <li>Jelly Edibles</li>
@@ -218,17 +240,17 @@
     </ul>
 
     <h3>🌍 Sustainable Living Notes</h3>
-    <p>Every conscious choice contributes to a healthier planet. The Green Menu isn’t just about what’s on your plate, but how your habits align with Earth-friendly living.</p>
+    <p>Every conscious choice contributes to a healthier planet. The Green Menu isn't just about what's on your plate, but how your habits align with Earth-friendly living.</p>
   </div>
 
-  <footer>
+  <footer id="contact">
     <div class="footer-content">
       <h2>Connect With Us</h2>
 
       <div class="socials">
         <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
         <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
-        <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
+        <a href="https://x.com/BCco338114" target="_blank">🐦 X/Twitter</a>
       </div>
 
       <h3>Or send us a message:</h3>
@@ -245,5 +267,6 @@
       &copy; 2025 SPIRITUAL SUSTENANCE | All Rights Reserved
     </div>
   </footer>
+
 </body>
 </html>
