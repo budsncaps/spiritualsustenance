@@ -83,7 +83,7 @@
     }
 
     .footer-content {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       display: flex;
       flex-wrap: wrap;
@@ -92,12 +92,16 @@
     }
 
     .footer-section {
-      flex: 1 1 220px;
+      flex: 1 1 250px;
+      min-width: 220px;
     }
 
     .footer-section h4 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       color: #d4f8d4;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #d4f8d4;
+      padding-bottom: 0.3rem;
     }
 
     .footer-section p,
@@ -105,28 +109,51 @@
       color: white;
       text-decoration: none;
       font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     .footer-section a:hover {
       text-decoration: underline;
     }
 
+    .socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 0.5rem;
+    }
+
     .socials a {
-      margin-right: 10px;
+      display: inline-block;
+      background-color: #2f5c29;
+      padding: 6px 10px;
+      border-radius: 6px;
       color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
     }
 
     .socials a:hover {
-      color: #d4f8d4;
+      background-color: #4d8a49;
     }
 
     .copyright {
       text-align: center;
-      margin-top: 1rem;
+      margin-top: 2rem;
       font-size: 0.85rem;
       opacity: 0.8;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 700px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .socials {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -136,13 +163,18 @@
     <p>Green Menu — Conscious Eating, Conscious Living</p>
   </header>
 
-
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="green-menu.html">Green Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <div class="container">
     <h2>Welcome to the Green Menu</h2>
-    <p>Your curated guide to plant-based products.</p>
+    <p>Your curated guide to plant-based meals, eco-conscious recipes, and sustainable choices. Fuel your body, nurture the planet.</p>
 
-    <h3>🌱 Featured </h3>
+    <h3>🌱 Featured Recipes</h3>
     <ul>
       <li>Chickpea & Spinach Coconut Curry</li>
       <li>Rainbow Veggie Buddha Bowl</li>
@@ -165,26 +197,26 @@
   </div>
 
   <footer>
-    
+    <div class="footer-content">
       <div class="footer-section">
-   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="section-title">Connect With Us</div>
-    <div class="contact-icons">
-      <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
-      <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
-      <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
-    </div>
-
-    <h3 style="margin-top:30px;">Or send us a message:</h3>
-    <form action="https://formsubmit.co/budsdotcaps@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@spiritualsustenance.com">info@spiritualsustenance.com</a></p>
+        <p>Phone: <a href="tel:+27123456789">+27 12 345 6789</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Location</h4>
+        <p>Johannesburg, South Africa</p>
+        <p>Worldwide | Online Community</p>
+      </div>
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
     </div>
     <div class="copyright">
       &copy; 2025 SPIRITUAL SUSTENANCE | All Rights Reserved
