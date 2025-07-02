@@ -5,56 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Fungi Menu | SPIRITUAL SUSTENANCE - A guide to plant-based living and conscious choices." />
   <title>🍄 Fungi Menu | SPIRITUAL SUSTENANCE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
+
   <style>
-    /* ===== Global Styles ===== */
+    :root {
+      --primary: #00ffae;
+      --secondary: #1fc744;
+      --bg-dark: #1f2d1f;
+      --text-light: #e4ffe4;
+      --accent: #aaffdd;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f7f5;
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, var(--secondary), var(--bg-dark));
+      color: var(--text-light);
     }
 
-    h1, h2, h3, h4 {
-      color: #3a6b35;
-    }
-
-    /* ===== Header ===== */
     header {
-      background-color: #3a6b35;
-      color: white;
-      padding: 1rem;
+      padding: 80px 20px 40px;
+      background: url('header-bg.jpg') center/cover no-repeat;
+      background-color: rgba(0, 0, 0, 0.6);
+      background-blend-mode: overlay;
       text-align: center;
     }
 
-    /* ===== Navigation ===== */
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 6px var(--primary);
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+
+    header p {
+      font-size: 20px;
+      margin: 8px 0 0;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary); }
+      to { text-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent); }
+    }
+
     nav {
-      background-color: #2f5c29;
+      background-color: rgba(0, 0, 0, 0.85);
       display: flex;
       justify-content: center;
       gap: 2rem;
-      padding: 0.5rem 0;
+      padding: 12px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     nav a {
-      color: #fff;
+      color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bold;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #d4f8d4;
+      color: #d6ffe9;
     }
 
-    /* ===== Main Container ===== */
     .container {
       max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 2px solid rgba(57, 227, 154, 0.5);
+      border-radius: 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    h2, h3 {
+      color: var(--accent);
+      text-shadow: 1px 1px 6px var(--primary);
+    }
+
+    p {
+      line-height: 1.6;
     }
 
     ul {
@@ -63,132 +100,125 @@
     }
 
     ul li {
-      background-color: #eaf6ea;
-      margin: 0.5rem 0;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(57, 227, 154, 0.4);
+      border-radius: 16px;
+      margin: 10px 0;
+      padding: 12px 16px;
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     ul li:hover {
-      background-color: #d4f8d4;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
 
-    /* ===== Footer ===== */
     footer {
-      background-color: #3a6b35;
-      color: white;
-      padding: 3rem 1rem;
-      margin-top: 2rem;
+      background-color: rgba(0,0,0,0.8);
+      color: #aaa;
+      padding: 30px 10px;
+      text-align: center;
+      margin-top: 40px;
     }
 
     .footer-content {
-      max-width: 700px;
+      max-width: 1000px;
       margin: auto;
-      text-align: center;
     }
 
-    .footer-content h2 {
-      margin-bottom: 1rem;
-      color: #d4f8d4;
-    }
-
-    .contact-icons {
+    .socials {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 1.5rem;
+      margin: 20px 0;
     }
 
-    .contact-icons a {
-      background-color: #2f5c29;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 8px;
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: white;
+      color: var(--bg-dark);
+      padding: 10px 16px;
+      border-radius: 30px;
       text-decoration: none;
-      font-weight: 500;
-      transition: background-color 0.3s;
-      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid var(--primary);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
     }
 
-    .contact-icons a:hover {
-      background-color: #4d8a49;
+    .socials a:hover {
+      background-color: var(--primary);
+      color: var(--bg-dark);
+      transform: translateY(-2px);
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
-      margin-top: 1rem;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-      width: 100%;
-      max-width: 500px;
+      gap: 12px;
       margin: auto;
+      max-width: 400px;
     }
 
-    textarea {
-      resize: vertical;
-    }
-
-    button {
-      background-color: #2f5c29;
-      color: white;
-      padding: 10px 20px;
-      border: none;
+    form input, form textarea {
+      padding: 10px 12px;
       border-radius: 8px;
-      cursor: pointer;
+      border: none;
+      background-color: rgba(255,255,255,0.08);
+      color: var(--text-light);
+    }
+
+    form button {
+      padding: 10px 14px;
+      border: none;
+      background-color: var(--accent);
+      color: var(--bg-dark);
+      border-radius: 8px;
       font-weight: 600;
-      width: fit-content;
-      margin: auto;
+      cursor: pointer;
       transition: background-color 0.3s;
     }
 
-    button:hover {
-      background-color: #4d8a49;
+    form button:hover {
+      background-color: var(--primary);
     }
 
     .copyright {
-      text-align: center;
-      margin-top: 2rem;
+      margin-top: 20px;
       font-size: 0.85rem;
       opacity: 0.8;
     }
 
-    /* ===== Responsive ===== */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       nav {
         flex-wrap: wrap;
-      }
-      .contact-icons {
-        gap: 0.7rem;
       }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>SPIRITUAL SUSTENANCE</h1>
     <p>🍄 FUNGI 🍄</p>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="green-menu.html">🌱 GREEN 🌱</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">🏠 Home</a>
+    <a href="green-menu.html">🌱 Green Menu</a>
+    <a href="#contact">📞 Contact</a>
   </nav>
 
   <div class="container">
-    <h2></h2>
-    <p>If you can't find what you are looking for, please contact us. We will help you find it or connect you with colleagues who can assist!</p>
+    <h2>🍄 Fungi</h2>
+    <p>If you can't find what you're looking for, contact us. We'll assist or connect you with someone who can help.</p>
 
-    <h3>🍄 Featured (Dependent on Stock. Orders in Advance on specific strains welcomed)</h3>
+    <h3>🌟 Featured (Stock-dependent. Orders in advance welcomed)</h3>
     <ul>
       <li>FatNat</li>
       <li>HillBilly Pumpkin</li>
@@ -198,7 +228,7 @@
       <li>Golden Teachers</li>
       <li>Natal Super Strength</li>
       <li>Amazonians</li>
-      <li>Hawaions</li>
+      <li>Hawaiians</li>
       <li>BePositive</li>
       <li>Blond Incas</li>
       <li>Albino Inca Stargazers</li>
@@ -207,16 +237,16 @@
       <li>Yellow Umbo</li>
       <li>Penis Envy</li>
       <li>Albino Penis Envy</li>
-      <li>AND MORE. . . </li>
+      <li>...and more</li>
     </ul>
 
-    <h3>🍄 Edibles & Microdosing(Dependent on Stock. Custom and in advance orders welcomed)</h3>
+    <h3>🍫 Edibles & Microdosing (Stock-dependent. Orders in advance welcomed)</h3>
     <ul>
-      <li>1 - 5 g Choclate varients</li>
+      <li>1–5g Chocolate variants</li>
       <li>Jelly Edibles</li>
-      <li>Variety of microdosing on natural mushroom medicine</li>
+      <li>Microdosing capsules (natural mushroom medicine)</li>
       <li>Muffins</li>
-      <li>And more...</li>
+      <li>...and more</li>
     </ul>
 
     <h3>🌍 Sustainable Living Notes</h3>
@@ -227,10 +257,10 @@
     <div class="footer-content">
       <h2 id="contact">Connect With Us</h2>
 
-      <div class="contact-icons">
+      <div class="socials">
         <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
         <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
-        <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
+        <a href="https://x.com/BCco338114" target="_blank">🐦 X/Twitter</a>
       </div>
 
       <h3>Or send us a message:</h3>
@@ -247,5 +277,6 @@
       &copy; 2025 SPIRITUAL SUSTENANCE | All Rights Reserved
     </div>
   </footer>
+
 </body>
 </html>
