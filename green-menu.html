@@ -47,7 +47,7 @@
       color: #d4f8d4;
     }
 
-    /* ===== Container/Main Content ===== */
+    /* ===== Container ===== */
     .container {
       max-width: 1000px;
       margin: 2rem auto;
@@ -83,58 +83,72 @@
     }
 
     .footer-content {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
     }
 
-    .footer-section {
-      flex: 1 1 250px;
-      min-width: 220px;
-    }
-
-    .footer-section h4 {
-      margin-bottom: 1rem;
+    .footer-content h3 {
+      margin: 0;
       color: #d4f8d4;
-      font-size: 1.2rem;
       border-bottom: 1px solid #d4f8d4;
       padding-bottom: 0.3rem;
-    }
-
-    .footer-section p,
-    .footer-section a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .footer-section a:hover {
-      text-decoration: underline;
+      font-size: 1.3rem;
     }
 
     .socials {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       margin-top: 0.5rem;
     }
 
     .socials a {
       display: inline-block;
       background-color: #2f5c29;
-      padding: 6px 10px;
+      padding: 8px 14px;
       border-radius: 6px;
       color: white;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       transition: background-color 0.3s;
+      text-decoration: none;
     }
 
     .socials a:hover {
       background-color: #4d8a49;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    form input, form textarea {
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: none;
+      background-color: #f0f0f0;
+    }
+
+    form button {
+      padding: 10px 14px;
+      border: none;
+      background-color: #d4f8d4;
+      color: #2f5c29;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #aee5ae;
     }
 
     .copyright {
@@ -143,11 +157,13 @@
       font-size: 0.85rem;
       opacity: 0.8;
     }
+
     /* ===== Responsive ===== */
     @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+      }
       .footer-content {
-        flex-direction: column;
-        align-items: center;
         text-align: center;
       }
       .socials {
@@ -162,53 +178,57 @@
     <p>🌱 Green Menu 🌱</p>
   </header>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="fungi-menu.html">Fungi Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <div class="container">
     <h2>Welcome to the Green Menu</h2>
-    <p>Your curated guide to Plant based medicines</p>
+    <p>Your curated guide to plant-based medicines.</p>
 
-    If you can't find what you are looking for please make contact and we will help you find it or put you intouch with colleuges that can assist/advise !!
+    <p>If you can't find what you are looking for, please contact us. We will help you find it or connect you with colleagues who can assist!</p>
 
-    <h3>🌱 Featured (Please Note: Stock may vary. Custome advance orders and strain enquiries welcomed)</h3>
+    <h3>🌱 Featured</h3>
+    <p><em>Note: Stock may vary. Custom advance orders and strain enquiries welcomed.</em></p>
     <ul>
-      <li> GELATO (Tunnel)</li>
-      <li> SLURRI (Tunnel)</li>
-      <li>COCONUT CHALICE(Indoor)</li>
+      <li>GELATO (Tunnel)</li>
+      <li>SLURRI (Tunnel)</li>
+      <li>COCONUT CHALICE (Indoor)</li>
       <li>CHEESE (Tunnel)</li>
       <li>JACK HERRER (Tunnel)</li>
     </ul>
 
-    <h3>🍃 Edibles (Please note: This depends on stock availability and cutom advance orders are welcomed)</h3>
+    <h3>🍃 Edibles</h3>
+    <p><em>Note: Depends on stock availability. Custom advance orders welcomed.</em></p>
     <ul>
-      <li>Choclates</li>
+      <li>Chocolates</li>
       <li>Jelly Edibles</li>
       <li>Cookies</li>
       <li>And more...</li>
     </ul>
 
     <h3>🌍 Sustainable Living Notes</h3>
-    <p>Remember, every conscious choice contributes to a healthier planet. The Green Menu isn’t just about what’s on your plate, but how your habits align with Earth-friendly living.</p>
+    <p>Every conscious choice contributes to a healthier planet. The Green Menu isn’t just about what’s on your plate, but how your habits align with Earth-friendly living.</p>
   </div>
 
   <footer>
-    <div class="footer-content">
-      <section class="contact" id="contact">
-    <div class="section-title">Connect With Us</div>
-    <div class="contact-icons">
-      <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
-      <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
-      <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
-    </div>
+    <div class="footer-content" id="contact">
+      <h3>Connect With Us</h3>
+      <div class="socials">
+        <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
+        <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
+        <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
+      </div>
 
-    <h3 style="margin-top:30px;">Or send us a message:</h3>
-    <form action="https://formsubmit.co/budsdotcaps@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-      
+      <form action="https://formsubmit.co/budsdotcaps@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
     <div class="copyright">
       &copy; 2025 SPIRITUAL SUSTENANCE | All Rights Reserved
