@@ -91,34 +91,42 @@
       gap: 1.5rem;
     }
 
-    .footer-content h3 {
+    .footer-content h2 {
       margin: 0;
       color: #d4f8d4;
       border-bottom: 1px solid #d4f8d4;
       padding-bottom: 0.3rem;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
 
     .socials {
       display: flex;
       gap: 14px;
-      margin-top: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .socials a {
-      display: inline-block;
-      background-color: #2f5c29;
-      padding: 8px 14px;
-      border-radius: 6px;
-      color: white;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: white;
+      color: #3a6b35;
+      padding: 10px 16px;
+      border-radius: 30px;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 2px solid #3a6b35;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
     }
 
     .socials a:hover {
-      background-color: #4d8a49;
+      background-color: #3a6b35;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     form {
@@ -131,7 +139,7 @@
 
     form input, form textarea {
       padding: 10px 12px;
-      border-radius: 6px;
+      border-radius: 8px;
       border: none;
       background-color: #f0f0f0;
     }
@@ -141,7 +149,7 @@
       border: none;
       background-color: #d4f8d4;
       color: #2f5c29;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
       transition: background-color 0.3s;
@@ -213,11 +221,11 @@
     <p>Every conscious choice contributes to a healthier planet. The Green Menu isn’t just about what’s on your plate, but how your habits align with Earth-friendly living.</p>
   </div>
 
- <footer>
+  <footer>
     <div class="footer-content">
       <h2>Connect With Us</h2>
 
-      <div class="contact-icons">
+      <div class="socials">
         <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
         <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
         <a href="https://x.com/BCco338114" target="_blank">🐦 X / Twitter</a>
