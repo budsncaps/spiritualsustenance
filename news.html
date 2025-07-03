@@ -228,6 +228,22 @@
     }
 
 /* ---------*/
+.responsive-instagram {
+  position: relative;
+  width: 100%;
+  padding-top: 120%; /* Adjust ratio if needed */
+  overflow: hidden;
+}
+
+.responsive-instagram iframe,
+.instagram-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 500px;
+}
 
 /* ---------- */
 
@@ -307,10 +323,10 @@
    <!-- 📲 Social Updates -->
   <div class="category-block">
     <h2>📲 Social Media Highlights</h2>
-    <div class="post">
-      <h3>Instagram</h3>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLjzIkrt7XU/?igsh=NDIzdGhjdmRlNWhl" data-instgrm-version="14" style="background:#FFF; border:0; margin: 0 auto; max-width: 540px; width: 100%;"></blockquote>
-    </div>
+    <div class="responsive-instagram">
+  <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLjzIkrt7XU/?igsh=NDIzdGhjdmRlNWhl" data-instgrm-version="14" style="background:#FFF; border:0; margin: 0 auto; max-width: 540px; width: 100%;"></blockquote>
+</div>
+
     <div class="post">
       <h3>X / Twitter</h3>
       <blockquote class="twitter-tweet">
