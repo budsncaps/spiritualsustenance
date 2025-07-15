@@ -257,6 +257,22 @@
         display: block;
       }
     }
+
+    .instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.instagram-embed {
+  max-width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
   </style>
 </head>
 
@@ -322,17 +338,25 @@
   </div>
 
   <!-- 📲 SOCIAL EXPERIMENT -->
-    <div id="cultivation" class="category-block">
-    <h2>📲 Social Media Highlights</h2>
-    <div class="responsive-instagram">
-  <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMFKyhTNVcH/" data-instgrm-version="14" style="background:#FFF; border:0; margin: 0 auto; max-width: 540px; width: 100%;"></blockquote>
-</div>
-
-      <div class="responsive-instagram">
-  <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKuuWZqMhYC/" data-instgrm-version="14" style="background:#FFF; border:0; margin: 0 auto; max-width: 540px; width: 100%;"></blockquote>
-</div>
-
+   <div id="cultivation" class="category-block">
+  <h2>📲 Social Media Highlights</h2>
+  <div class="instagram-grid">
+    <div class="instagram-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMFKyhTNVcH/" data-instgrm-version="14" style="background:#FFF; border:0; width:100%;"></blockquote>
+    </div>
+    <div class="instagram-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKuuWZqMhYC/" data-instgrm-version="14" style="background:#FFF; border:0; width:100%;"></blockquote>
+    </div>
+    <!-- Add more below if needed -->
+    <div class="instagram-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/POST_ID_3/" data-instgrm-version="14" style="background:#FFF; border:0; width:100%;"></blockquote>
+    </div>
+    <div class="instagram-embed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/POST_ID_4/" data-instgrm-version="14" style="background:#FFF; border:0; width:100%;"></blockquote>
+    </div>
   </div>
+</div>
+
   
   <!-- 📲 SOCIAL EXPERIMENT -->
 
