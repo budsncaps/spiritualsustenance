@@ -127,7 +127,6 @@
       font-size: 14px;
     }
 
-    /* Sidebar (Desktop) */
     .sidebar {
       position: fixed;
       top: 100px;
@@ -153,7 +152,6 @@
       color: #d0ffd0;
     }
 
-    /* Floating Buttons */
     .back-to-top, .back-to-home {
       position: fixed;
       right: 20px;
@@ -172,15 +170,9 @@
       background: rgba(32, 64, 32, 0.95);
     }
 
-    .back-to-top {
-      bottom: 20px;
-    }
+    .back-to-top { bottom: 20px; }
+    .back-to-home { bottom: 80px; }
 
-    .back-to-home {
-      bottom: 80px;
-    }
-
-    /* Hamburger Button (Mobile) */
     .hamburger {
       display: none;
       position: fixed;
@@ -227,70 +219,43 @@
       color: #d0ffd0;
     }
 
-/* ---------*/
-.responsive-instagram {
-  position: relative;
-  width: 100%;
-  padding-top: 120%; /* Adjust ratio if needed */
-  overflow: hidden;
-}
-
-.responsive-instagram iframe,
-.instagram-media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 500px;
-}
-
-/* ---------- */
-
-    
-
-    @media (max-width: 800px) {
-      .sidebar {
-        display: none;
-      }
-      .hamburger {
-        display: block;
-      }
+    .instagram-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
-    .instagram-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 10px 0;
-  justify-content: center;
-}
+    .instagram-grid .responsive-instagram {
+      flex: 1 1 300px;
+      max-width: 300px;
+      position: relative;
+      padding-top: 130%;
+    }
 
-.instagram-embed {
-  max-width: 100%;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-}
+    .responsive-instagram iframe,
+    .instagram-media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 500px;
+    }
 
+    @media (max-width: 800px) {
+      .sidebar { display: none; }
+      .hamburger { display: block; }
+    }
   </style>
 </head>
 
 <body>
-
   <header id="top">
     <h1>News, Blog & Resource Sharing</h1>
-    <p class="intro">
-      Updates, drops, tips, and plant-powered insights from the <strong>SPIRITUAL SUSTENANCE</strong> community.
-    </p>
-
-    <p class="intro">
-      Want to <strong>SHARE</strong> on our platform or community? Send us a message to find out more.
-    </p>
-
-   <p class="intro">
-      We offer both <strong>retail</strong> and <strong>wholesale</strong> options – get in touch if you're interested! <strong>T&Cs apply</strong>.
-    </p>
+    <p class="intro">Updates, drops, tips, and plant-powered insights from the <strong>SPIRITUAL SUSTENANCE</strong> community.</p>
+    <p class="intro">Want to <strong>SHARE</strong> on our platform or community? Send us a message to find out more.</p>
+    <p class="intro">We offer both <strong>retail</strong> and <strong>wholesale</strong> options – get in touch if you're interested! <strong>T&Cs apply</strong>.</p>
   </header>
 
   <div class="sidebar">
@@ -321,44 +286,23 @@
   <a href="green-menu.html" class="back-to-home" style="bottom: 140px;" title="Green Menu">🌿</a>
   <a href="fungi-menu.html" class="back-to-home" style="bottom: 200px;" title="Fungi Menu">🍄</a>
 
-  <div id="drops" class="category-block">
-    <h2>🌿 Product Drops</h2>
-    <div class="post">
-      <div class="date"></div>
-      <h3> 🔥 ‼️ 🍄 ‼️ 🌿 EYES OPEN, NEW STOCK LANDING SOON 🌿 ‼️ 🍄 ‼️ 🔥 </h3>
-      <h3> 🔥 ‼️ 🍄 ‼️ 🌿 EYES OPEN, NEW STOCK LANDING SOON 🌿 ‼️ 🍄 ‼️ 🔥 </h3>
-      <p><strong>Fungi and Cannabis edibles, health products and other related</strong> 👀 Send us a message or keep an eye out for updates 👀 <br><br>🔗 <a href="https://wa.me/27650840431">📱 WhatsApp</a></p>
-    </div>
-    <div style="text-align:center; margin-top: 20px;">
-      <a href="fungi-menu.html" style="background-color: var(--accent); color: #1f2d1f; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">🍄 View Fungi</a>
-    </div>
-    <div style="text-align:center; margin-top: 20px;">
-      <a href="green-menu.html" style="background-color: var(--accent); color: #1f2d1f; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">🌿 View Cannabis</a>
-    </div>
-  </div>
-
-  <!-- 📲 SOCIAL EXPERIMENT -->
-   <div id="cultivation" class="category-block">
-  <h2>📲 Social Media Highlights</h2>
-  <div class="instagram-grid">
-    <div class="instagram-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMFKyhTNVcH/" data-instgrm-version="14" style="background:#FFF; border:0; width:100%;"></blockquote>
-    </div>
-    <div class="instagram-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKuuWZqMhYC/" data-instgrm-version="14" style="background:#FFF; border:0; width:100%;"></blockquote>
-    </div>
-    <!-- Add more below if needed -->
-    <div class="instagram-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/POST_ID_3/" data-instgrm-version="14" style="background:#FFF; border:0; width:100%;"></blockquote>
-    </div>
-    <div class="instagram-embed">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/POST_ID_4/" data-instgrm-version="14" style="background:#FFF; border:0; width:100%;"></blockquote>
+  <div id="cultivation" class="category-block">
+    <h2>📲 Social Media Highlights</h2>
+    <div class="instagram-grid">
+      <div class="responsive-instagram">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMFKyhTNVcH/" data-instgrm-version="14" style="background:#FFF;"></blockquote>
+      </div>
+      <div class="responsive-instagram">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKuuWZqMhYC/" data-instgrm-version="14" style="background:#FFF;"></blockquote>
+      </div>
+      <div class="responsive-instagram">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DL-aKLhRSOJ/" data-instgrm-version="14" style="background:#FFF;"></blockquote>
+      </div>
+      <div class="responsive-instagram">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJ1nQdYOoJC/" data-instgrm-version="14" style="background:#FFF;"></blockquote>
+      </div>
     </div>
   </div>
-</div>
-
-  
-  <!-- 📲 SOCIAL EXPERIMENT -->
 
 
 
