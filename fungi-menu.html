@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fungi Menu | SPIRITUAL SUSTENANCE - A guide to plant-based living and conscious choices." />
-  <title>🍄 Fungi Menu | SPIRITUAL SUSTENANCE</title>
+  <meta name="description" content="green Menu | SPIRITUAL SUSTENANCE - A guide to plant-based living and conscious choices." />
+  <title>green Menu | SPIRITUAL SUSTENANCE</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
 
   <style>
@@ -14,30 +14,24 @@
       --bg-dark: #1f2d1f;
       --text-light: #e4ffe4;
       --accent: #aaffdd;
-      --button-bg: #00ffae;
-      --button-hover: #1fc744;
     }
-
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
-
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       background: linear-gradient(to bottom, var(--secondary), var(--bg-dark));
       color: var(--text-light);
     }
-
     header {
       padding: 80px 20px 40px;
       background: url('header-bg.jpg') center/cover no-repeat;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0,0,0,0.6);
       background-blend-mode: overlay;
       text-align: center;
     }
-
     header h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 48px;
@@ -45,94 +39,68 @@
       text-shadow: 2px 2px 6px var(--primary);
       animation: glow 2.5s ease-in-out infinite alternate;
     }
-
-    header p {
-      font-size: 20px;
-      margin: 8px 0 0;
-    }
-
+    header p { font-size: 20px; margin: 8px 0 0; }
     @keyframes glow {
       from { text-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary); }
       to { text-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent); }
     }
-
     nav {
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgba(0,0,0,0.85);
       display: flex;
       justify-content: center;
       gap: 2rem;
       padding: 12px 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
-
     nav a {
       color: var(--accent);
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
-
-    nav a:hover {
-      color: #d6ffe9;
-    }
-
+    nav a:hover { color: #d6ffe9; }
     .container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 30px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 2px solid rgba(57, 227, 154, 0.5);
+      background: rgba(255,255,255,0.04);
+      border: 2px solid rgba(57,227,154,0.5);
       border-radius: 24px;
       backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-
     h2, h3 {
       color: var(--accent);
       text-shadow: 1px 1px 6px var(--primary);
     }
-
-    p {
-      line-height: 1.6;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(57, 227, 154, 0.4);
+    p { line-height: 1.6; }
+    ul { list-style: none; padding: 0; }
+    li {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(57,227,154,0.4);
       border-radius: 16px;
       margin: 10px 0;
-      padding: 12px 16px;
+      padding: 16px;
       backdrop-filter: blur(8px);
       transition: transform 0.3s, box-shadow 0.3s;
     }
-
-    ul li:hover {
+    li:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
-
-    .learn-button {
+    .strain-name { font-size: 1.2rem; font-weight: bold; margin-bottom: 4px; }
+    .strain-desc { margin-bottom: 8px; color: var(--text-light); }
+    .strain-link {
       display: inline-block;
-      margin-top: 8px;
-      padding: 8px 12px;
-      background: var(--button-bg);
+      padding: 6px 12px;
+      background-color: var(--accent);
       color: var(--bg-dark);
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
-
-    .learn-button:hover {
-      background: var(--button-hover);
-      color: var(--text-light);
-    }
-
+    .strain-link:hover { background-color: var(--primary); }
     footer {
       background-color: rgba(0,0,0,0.8);
       color: #aaa;
@@ -140,12 +108,6 @@
       text-align: center;
       margin-top: 40px;
     }
-
-    .footer-content {
-      max-width: 1000px;
-      margin: auto;
-    }
-
     .socials {
       display: flex;
       justify-content: center;
@@ -153,7 +115,6 @@
       flex-wrap: wrap;
       margin: 20px 0;
     }
-
     .socials a {
       display: inline-flex;
       align-items: center;
@@ -165,66 +126,38 @@
       text-decoration: none;
       font-weight: 600;
       border: 2px solid var(--primary);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
     }
-
     .socials a:hover {
       background-color: var(--primary);
       color: var(--bg-dark);
       transform: translateY(-2px);
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: auto;
-      max-width: 400px;
-    }
-
     form input, form textarea {
-      padding: 10px 12px;
+      padding: 10px;
       border-radius: 8px;
       border: none;
       background-color: rgba(255,255,255,0.08);
       color: var(--text-light);
     }
-
     form button {
       padding: 10px 14px;
-      border: none;
       background-color: var(--accent);
       color: var(--bg-dark);
+      border: none;
       border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
       transition: background-color 0.3s;
     }
-
-    form button:hover {
-      background-color: var(--primary);
-    }
-
-    .copyright {
-      margin-top: 20px;
-      font-size: 0.85rem;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        flex-wrap: wrap;
-      }
-    }
+    form button:hover { background-color: var(--primary); }
+    @media (max-width: 700px) { nav { flex-wrap: wrap; } }
   </style>
 </head>
-
 <body>
-
   <header>
     <h1>SPIRITUAL SUSTENANCE</h1>
-    <p>🍄 FUNGI 🍄</p>
+    <p>🍄 Fungi 🍄</p>
     <p class="intro">
       We offer both <strong>retail</strong> and <strong>wholesale</strong> options – get in touch if you're interested! <strong>T&Cs apply</strong>.
     </p>
@@ -232,121 +165,67 @@
 
   <nav>
     <a href="index.html">🏠 Home</a>
-    <a href="green-menu.html">🌱 Cannabis</a>
+    <a href="fungi-menu.html">🍄 Fungi</a>
     <a href="#contact">📞 Contact</a>
   </nav>
 
   <div class="container">
     <h2>🍄 Fungi</h2>
-    <p>If you can't find what you're looking for, contact us. We'll assist or connect you with someone who can help.</p>
+    <p>Your curated guide to plant-based medicines and conscious living.</p>
+    <p>If you can't find what you're looking for, contact us! We'll assist or connect you with someone who can help.</p>
 
-    <h3>🌟 Featured (Stock-dependent. Orders in advance welcomed)</h3>
+    <h3>🌟 Featured</h3>
+    <p><em>Note: Stock may vary. Custom advance orders and strain enquiries welcomed.</em></p>
+
     <ul>
       <li>
-       Lion's Main<br>
-        <a class="learn-button" href="https://www.healthline.com/nutrition/lions-mane-mushroom" target="_blank">Learn More</a>
+        <div class="strain-name">Lion’s Mane</div>
+        <div class="strain-desc">Known for cognitive support, potentially boosting memory, nerve regeneration, and mood.</div>
+        <a class="strain-link" href="https://www.healthline.com/nutrition/lions-mane-mushroom?utm_source=chatgpt.com" target="_blank">Read about Gelato</a>
       </li>
       <li>
-        Reishi / Lingzhi<br>
-        <a class="learn-button" href="https://earthpowernutrition.co.uk/blogs/news/the-incredible-health-benefits-of-medicinal-mushrooms-reishi-chaga-and-lion-s-mane?srsltid=AfmBOoqpj0GopOuzSUZSeZTx-YauHTNJL0UNr5XDOLuipo-vzFjDIdut&utm_source=chatgpt.com" target="_blank">Learn More</a>
-      </li>
-       <li>
-        Chaga<br>
-        <a class="learn-button" href="https://www.realsimple.com/chaga-mushroom-benefits-7498302?utm_source=chatgpt.com" target="_blank">Learn More</a>
+        <div class="strain-name">Reishi / Lingzhi</div>
+        <div class="strain-desc">Supports immune resilience, stress relief, and restful sleep.</div>
+        <a class="strain-link" href="https://www.realsimple.com/chaga-mushroom-benefits-7498302?utm_source=chatgpt.com" target="_blank">Read about Slurricane</a>
       </li>
       <li>
-        Cordyceps<br>
-        <a class="learn-button" href="https://www.bonappetit.com/story/which-healing-mushroom-is-right-for-you?utm_source=chatgpt.com" target="_blank">Learn More</a>
+        <div class="strain-name">Chaga</div>
+        <div class="strain-desc">High in antioxidants, anti-inflammatory support, and may aid heart and gut health .</div>
+        <a class="strain-link" href="https://www.realsimple.com/chaga-mushroom-benefits-7498302?utm_source=chatgpt.com" target="_blank">Read about Coconut Chalice</a>
       </li>
       <li>
-        Turkey Tail<br>
-        <a class="learn-button" href="https://www.healthline.com/nutrition/turkey-tail-mushroom" target="_blank">Learn More</a>
+        <div class="strain-name">Cordyceps</div>
+        <div class="strain-desc">Popular for energy, athletic performance, and respiratory support .</div>
+        <a class="strain-link" href="https://www.healthline.com/nutrition/cordyceps-benefits" target="_blank">Read about Exodus Cheese</a>
       </li>
       <li>
-        Maitake<br>
-        <a class="learn-button" href="https://www.healthline.com/health/food-nutrition/maitake-mushroom" target="_blank">Learn More</a>
-      <!--
-      
-      </li>
-      <li>
-        Golden Teachers<br>
-        <a class="learn-button" href="https://en.wikipedia.org/wiki/Psilocybe_cubensis#Notable_strains" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Natal Super Strength<br>
-        <a class="learn-button" href="https://www.shroomery.org/9577/Natal-Super-Strength" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Amazonians<br>
-        <a class="learn-button" href="https://www.shroomery.org/7410/Amazonian" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Hawaiians<br>
-        <a class="learn-button" href="https://www.shroomery.org/464/Hawaiian" target="_blank">Learn More</a>
-      </li>
-      <li>
-        BePositive<br>
-        <a class="learn-button" href="https://www.shroomery.org/8952/Be-Positive" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Blond Incas<br>
-        <a class="learn-button" href="https://www.shroomery.org/12622/Blond-Incas" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Albino Inca Stargazers<br>
-        <a class="learn-button" href="https://www.shroomery.org/12700/Albino-Inca-Stargazers" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Trinity<br>
-        <a class="learn-button" href="https://www.shroomery.org/15306/Trinity" target="_blank">Learn More</a>
-      </li>
-      <li>
-        JackFrost<br>
-        <a class="learn-button" href="https://www.shroomery.org/12443/Jack-Frost" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Yellow Umbo<br>
-        <a class="learn-button" href="https://www.shroomery.org/9459/Yellow-Umbo" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Penis Envy<br>
-        <a class="learn-button" href="https://en.wikipedia.org/wiki/Penis_Envy_(mushroom)" target="_blank">Learn More</a>
-      </li>
-      <li>
-        Albino Penis Envy<br>
-        <a class="learn-button" href="https://www.shroomery.org/12901/Albino-Penis-Envy" target="_blank">Learn More</a>
-      </li>
-
-      <-->
-        
-      <li>
-        ...and more
+        <div class="strain-name">Turkey Tail </div>
+        <div class="strain-desc">Known to boost immunity, gut health, and help fight infections .</div>
+        <a class="strain-link" href="https://www.healthline.com/nutrition/turkey-tail-mushroom" target="_blank">Read about Jack Herer</a>
       </li>
     </ul>
 
-    <h3>🍫 Edibles & Microdosing (Stock‑dependent. Orders in advance welcomed)</h3>
+    <h3>🍚 Edibles</h3>
+    <p><em>Note: Availability may vary. Custom advance orders welcomed.</em></p>
     <ul>
-      <li>1–5g Chocolate variants</li>
+      <li>Chocolates</li>
       <li>Jelly Edibles</li>
-      <li>Microdosing capsules (natural mushroom medicine)</li>
-      <li>Muffins</li>
-      <li>...and more</li>
+      <li>Cookies</li>
+      <li>And more...</li>
     </ul>
 
     <h3>🌍 Sustainable Living Notes</h3>
     <p>Every conscious choice contributes to a healthier living.</p>
   </div>
 
-  <footer>
+  <footer id="contact">
     <div class="footer-content">
-      <h2 id="contact">Connect With Us</h2>
-
+      <h2>Connect With Us</h2>
       <div class="socials">
         <a href="https://wa.me/27650840431" target="_blank">📱 WhatsApp</a>
         <a href="https://instagram.com/_spiritual_sustenance_" target="_blank">📸 Instagram</a>
         <a href="https://x.com/BCco338114" target="_blank">🐦 X/Twitter</a>
       </div>
-
       <h3>Or send us a message:</h3>
       <form action="https://formsubmit.co/budsdotcaps@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
@@ -356,11 +235,9 @@
         <button type="submit">Send Message</button>
       </form>
     </div>
-
     <div class="copyright">
       &copy; 2025 SPIRITUAL SUSTENANCE | All Rights Reserved
     </div>
   </footer>
-
 </body>
 </html>
